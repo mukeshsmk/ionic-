@@ -1,0 +1,891 @@
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="inbox-title">MEMBERSHIP</ion-title>
+    </ion-navbar>
+    <ion-content  #scroll scrollX="true" style="height: 42px;">
+        <ion-segment  class="SwipedTabs-tabs"  >
+          <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
+          [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'  [ngStyle]="{'width.px': (this.tabElementWidth_px)}" >
+            {{tab}}
+          </ion-segment-button>
+        </ion-segment>
+      
+        <!-- here is our dynamic line  "indicator"-->
+        <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.px': (this.tabElementWidth_px)}" ></div>
+      </ion-content>
+</ion-header>
+
+<ion-content >
+
+
+    <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+                (ionSlideWillChange)="updateIndicatorPosition()"
+                (ionSlideDidChange)="updateIndicatorPosition()"
+                (pan)="updateIndicatorPosition()"
+                [pager]="false"
+          >
+      <ion-slide>
+        <ion-card>
+            <div *ngIf="!hide1" class="bg">
+            
+            <h5 class="membership-title">Classic</h5>
+                
+                
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Access 40 verified mobile numbers</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                      <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                      <p class="membership-content">Send 30 SMS </p>
+                    </div>
+                  </div>
+                  <div class="classic-card1">
+                    <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="eye"></ion-icon>
+
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Enhanced profile vizibility</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">veiw unlimited horoscopes</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Premium member tag for more response</p>
+                    </div>
+                </div>
+                
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-view-icon" name="contacts"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Relationship Manager</s></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="hide2" class="bg">
+            
+                <h5 class="membership-title">Classic Advantages</h5>
+
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Get 2 months FREE Profile Highlighter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="classic-card1">
+                      <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                      </div>
+                      <div class="classic-card3">
+                        <p class="membership-content">Send unlimited messages & chat</p>
+                      </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Access 55 verified mobile numbers</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">veiw unlimited horoscopes</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Premium member tag for more response</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                                <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+    
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+
+                <div *ngIf="hide3" class="bg">
+            
+                    <h5 class="membership-title">Classic Premium</h5>
+                        
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Get 3 months FREE Profile Highlighter</p>
+                            </div>
+                        </div>
+
+                        <div class="classic-card1">
+                          <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                          </div>
+                          <div class="classic-card3">
+                            <p class="membership-content">Send unlimited messages & chat</p>
+                          </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Access 60 verified mobile numbers</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="eye"></ion-icon>
+        
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Enhanced profile vizibility</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">veiw unlimited horoscopes</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Premium member tag for more response</p>
+                            </div>
+                        </div>
+                        
+                    
+        
+                    </div>
+                    <div class="tabs">
+
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==1}" (click)="toggleButton(1)">
+                            <h5>Rs.4500</h5>
+                            <span>Rs 50 / day</span>
+                            <p>Classic Package</p>
+                        </div> 
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==2}" (click)="toggleButton(2)">
+                                <h5>Rs.5200</h5>
+                                <span>Rs 57 / day</span>
+                                <p>Classic Advantage</p>
+                        </div>
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==3}" (click)="toggleButton(3)">
+                                <h5>Rs.6500</h5>
+                                <span>Rs 72 / day</span>
+                                <p>Classic Premium</p>
+                
+                        </div>
+                    </div>
+                    <div class="paynow">
+                            <button class="pay" ion-button block>PAYNOW</button>
+                    </div>
+           
+        </ion-card>
+      
+        
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+            <div *ngIf="!hide1" class="bg">
+            
+            <h5 class="membership-title">Classic</h5>
+                
+                <div class="classic-card1">
+                  <div class="classic-card2">
+                    <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                  </div>
+                  <div class="classic-card3">
+                    <p class="membership-content">Send unlimited messages & chat</p>
+                  </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Access 80 verified mobile numbers</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">veiw unlimited horoscopes</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Premium member tag for more response</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                            <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-view-icon" name="contacts"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Get 2 months FREE Profile Highlighter</s></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="hide2" class="bg">
+            
+                <h5 class="membership-title">Classic Advantages</h5>
+
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Get 4 months FREE Profile Highlighter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="classic-card1">
+                      <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                      </div>
+                      <div class="classic-card3">
+                        <p class="membership-content">Send unlimited messages & chat</p>
+                      </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Access 55 verified mobile numbers</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">veiw unlimited horoscopes</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Premium member tag for more response</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                                <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+    
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+
+                <div *ngIf="hide3" class="bg">
+            
+                    <h5 class="membership-title">Classic Premium</h5>
+                        
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Get 3 months FREE Profile Highlighter</p>
+                            </div>
+                        </div>
+
+                        <div class="classic-card1">
+                          <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                          </div>
+                          <div class="classic-card3">
+                            <p class="membership-content">Send unlimited messages & chat</p>
+                          </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Access 60 verified mobile numbers</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="eye"></ion-icon>
+        
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Enhanced profile vizibility</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">veiw unlimited horoscopes</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Premium member tag for more response</p>
+                            </div>
+                        </div>
+                        
+                    
+        
+                    </div>
+           
+
+                    <div class="tabs" >
+
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==1}" (click)="toggleButton(1)">
+                            <h5>Rs.7600</h5>
+                            <span>Rs 42 / day</span>
+                            <p>Classic Package</p>
+                        </div> 
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==2}" (click)="toggleButton(2)">
+                                <h5>Rs.8400</h5>
+                                <span>Rs 46 / day</span>
+                                <p>Classic Advantage</p>
+                        </div>
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==3}" (click)="toggleButton(3)">
+                                <h5>Rs.9900</h5>
+                                <span>Rs 55 / day</span>
+                                <p>Classic Premium</p>
+                
+                        </div>
+                    </div>
+                    <div class="paynow">
+                            <button class="pay" ion-button block>PAYNOW</button>
+                    </div>
+
+        </ion-card>
+      
+        
+      </ion-slide>
+
+
+      <ion-slide>
+        <ion-card>
+            <div *ngIf="!hide1" class="bg">
+            
+            <h5 class="membership-title">TUM Regular-1 Year</h5>
+                
+                <div class="classic-card1">
+                  <div class="classic-card2">
+                    <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                  </div>
+                  <div class="classic-card3">
+                    <p class="membership-content">Send unlimited messages & chat</p>
+                  </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Access 80 verified mobile numbers</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">veiw unlimited horoscopes</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Premium member tag for more response</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                            <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-view-icon" name="contacts"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Get 4 months FREE Profile Highlighter</s></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="hide2" class="bg">
+            
+                <h5 class="membership-title">TUM Advantage-1 Year</h5>
+
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Get 2 months FREE Profile Highlighter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="classic-card1">
+                      <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                      </div>
+                      <div class="classic-card3">
+                        <p class="membership-content">Send unlimited messages & chat</p>
+                      </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Access 55 verified mobile numbers</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">veiw unlimited horoscopes</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Premium member tag for more response</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                                <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+    
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+
+                <div *ngIf="hide3" class="bg">
+            
+                    <h5 class="membership-title">Classic Premium</h5>
+                        
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Get 3 months FREE Profile Highlighter</p>
+                            </div>
+                        </div>
+
+                        <div class="classic-card1">
+                          <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                          </div>
+                          <div class="classic-card3">
+                            <p class="membership-content">Send unlimited messages & chat</p>
+                          </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Access 60 verified mobile numbers</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="eye"></ion-icon>
+        
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Enhanced profile vizibility</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">veiw unlimited horoscopes</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Premium member tag for more response</p>
+                            </div>
+                        </div>
+                        
+                    
+        
+                    </div>
+
+                    <div class="tabs">
+
+                        <div class="tab-item1" [ngClass]="{'active': buttonActive==1}" (click)="toggleButton(1)">
+                            <h5>Rs.10900</h5>
+                            <span>Rs 29 / day</span>
+                            <p>TUM Regular-1 Year</p>
+                        </div> 
+                        <div class="tab-item1" [ngClass]="{'active': buttonActive==2}" (click)="toggleButton(2)">
+                                <h5>Rs.12900</h5>
+                                <span>Rs 35 / day</span>
+                                <p>TUM Advantage-1 Year</p>
+                        </div>
+
+                    </div>
+                    <div class="paynow">
+                            <button class="pay" ion-button block>PAYNOW</button>
+                    </div>
+           
+        </ion-card>
+      
+        
+      </ion-slide>
+
+       <ion-slide>
+        <ion-card>
+            <div *ngIf="!hide1">
+            
+            <h5 class="membership-title">Assisted -3months</h5>
+                
+                <div class="classic-card1">
+                  <div class="classic-card2">
+                    <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                  </div>
+                  <div class="classic-card3">
+                    <p class="membership-content">Send unlimited messages & chat</p>
+                  </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Access 40 verified mobile numbers</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">veiw unlimited horoscopes</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content">Premium member tag for more response</p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                            <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                    </div>
+                </div>
+                <div class="classic-card1">
+                    <div class="classic-card2">
+                        <ion-icon class="membership-view-icon" name="contacts"></ion-icon>
+                    </div>
+                    <div class="classic-card3">
+                        <p class="membership-content"><s>Get 2 months FREE Profile Highlighter</s></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="hide2">
+            
+                <h5 class="membership-title">Assisted -6months</h5>
+
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Get 2 months FREE Profile Highlighter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="classic-card1">
+                      <div class="classic-card2">
+                        <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                      </div>
+                      <div class="classic-card3">
+                        <p class="membership-content">Send unlimited messages & chat</p>
+                      </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Access 55 verified mobile numbers</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">veiw unlimited horoscopes</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content">Premium member tag for more response</p>
+                        </div>
+                    </div>
+                    <div class="classic-card1">
+                        <div class="classic-card2">
+                                <ion-icon class="membership-view-icon" name="eye"></ion-icon>
+    
+                        </div>
+                        <div class="classic-card3">
+                            <p class="membership-content"><s>Enhanced profile vizibility</s></p>
+                        </div>
+                    </div>
+                    
+    
+                </div>
+
+                <div *ngIf="hide3">
+            
+                    <h5 class="membership-title">EliteMatrimony</h5>
+                        
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="contacts"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Get 3 months FREE Profile Highlighter</p>
+                            </div>
+                        </div>
+
+                        <div class="classic-card1">
+                          <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                          </div>
+                          <div class="classic-card3">
+                            <p class="membership-content">Send unlimited messages & chat</p>
+                          </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-icon-phone" name="phone-portrait"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Access 60 verified mobile numbers</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                            <ion-icon class="membership-chat-icon" name="eye"></ion-icon>
+        
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Enhanced profile vizibility</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="planet"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">veiw unlimited horoscopes</p>
+                            </div>
+                        </div>
+                        <div class="classic-card1">
+                            <div class="classic-card2">
+                                <ion-icon class="membership-chat-icon" name="pricetag"></ion-icon>
+                            </div>
+                            <div class="classic-card3">
+                                <p class="membership-content">Premium member tag for more response</p>
+                            </div>
+                        </div>
+                        
+                    
+        
+                    </div>
+
+                    <div class="tabs">
+
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==1}" (click)="toggleButton(1)">
+                            <h5>Rs.17000</h5>
+                            <span>Rs 188 / day</span>
+                            <p>Assisted -3months</p>
+                        </div> 
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==2}" (click)="toggleButton(2)">
+                                <h5>Rs.32000</h5>
+                                <span>Rs 177 / day</span>
+                                <p>Assisted -6months</p>
+                        </div>
+                        <div class="tab-item" [ngClass]="{'active': buttonActive==3}" (click)="toggleButton(3)">
+                                <h5>Rs.45000</h5>
+                                <span>Rs 239 / day</span>
+                                <p>Assisted -9months</p>
+                
+                        </div>
+                    </div>
+                    <div class="paynow">
+                            <button class="pay" ion-button block>PAYNOW</button>
+                    </div>
+           
+        </ion-card>
+      
+        
+      </ion-slide>
+
+    </ion-slides>
+
+     <!-- <div class="tabs">
+
+        <div class="tab-item" [ngClass]="{'active': buttonActive==1}" (click)="toggleButton(1)">
+            <h5>Rs.4500</h5>
+            <span>Rs 50 / day</span>
+            <p>Classic Package</p>
+        </div> 
+        <div class="tab-item" [ngClass]="{'active': buttonActive==2}" (click)="toggleButton(2)">
+                <h5>Rs.5200</h5>
+                <span>Rs 57 / day</span>
+                <p>Classic Advantage</p>
+        </div>
+        <div class="tab-item" [ngClass]="{'active': buttonActive==3}" (click)="toggleButton(3)">
+                <h5>Rs.6500</h5>
+                <span>Rs 72 / day</span>
+                <p>Classic Premium</p>
+
+        </div>
+    </div>
+    <div class="paynow">
+            <button class="pay" ion-button block>PAYNOW</button>
+    </div> -->
+   
+</ion-content>  
+<ion-footer>
+        
+        <div class="footer">
+            <div class="footer-help">
+                <p>Need Help with Payments</p>
+            </div>
+            <div class="footer-phone">
+                <div class="phone-icon">
+                        <ion-icon class="icon-property" name="call"></ion-icon>
+                </div>
+                <div class="phone-num">
+                        <P>1234 567 890</P>
+                </div>
+            </div>
+            <div class="footer-chat">
+                <div class="phone-icon">
+                        <ion-icon  class="icon-property" name="chatbubbles"></ion-icon>
+
+                </div>
+                <div class="chat">
+                      <p>Chat now</p>      
+                </div>
+            </div>
+        </div>
+      
+</ion-footer>

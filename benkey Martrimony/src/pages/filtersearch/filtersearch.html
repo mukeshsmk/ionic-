@@ -1,0 +1,28 @@
+<!--
+  Generated template for the FiltersearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-searchbar class="homeSearch" [showCancelButton]="shouldShowCancel" placeholder="selectcountry"(ionInput)="getItems($event)"></ion-searchbar>
+
+
+</ion-header>
+
+
+<ion-content>
+<!-- <div *ngIf="searching" class="spinner-container">
+      <ion-spinner></ion-spinner>
+  </div> -->
+<ion-list>
+<div  ion-item *ngFor="let item of country" (click)="closesearch(item)">
+      <img src="{{item.flag}}" width="5%">
+  {{ item.name}} 
+  <span style="float:right">
+      
+      +{{item.callingCodes[0]}}
+  </span>
+  </div>
+</ion-list>
+</ion-content>

@@ -1,0 +1,30 @@
+.toolbar-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #ffffff;
+}    
+
+ page-settingsnotification {
+   
+        .toolbar-title {
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }    
+       
+        .input-wrapper {
+             margin-left: 0px !important;
+        }
+        .toggle-md .toggle-inner{
+            -webkit-transform: translate3d(16px, 0, 0);
+            transform: translate3d(16px, 0, 0);
+        }
+        .list-md .item-block .item-inner {
+            border-bottom: none !important;
+        }
+      
+}

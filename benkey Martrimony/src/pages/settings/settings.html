@@ -1,0 +1,47 @@
+<ion-header>
+
+    <ion-navbar>
+      
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="inbox-title">SETTINGS</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content >
+
+     <div class="settings">
+    
+        <div class="matches-view">
+            <div class="match-icon"><ion-icon ios="ios-people" md="md-people"></ion-icon></div>
+            <div class="match-conetent">Matches View</div>
+            <ion-list radio-group>                 
+                    <ion-item>
+                      <ion-label>List View</ion-label>
+                      <ion-radio checked="true" value="go"></ion-radio>
+                    </ion-item>
+                  
+                    <ion-item>
+                      <ion-label>Photo View</ion-label>
+                      <ion-radio value="rust"></ion-radio>
+                    </ion-item>
+            </ion-list>
+        </div>
+        <div class="matches-view" (click)="gotosettingsnotification()">
+            <div class="match-icon"><ion-icon name="notifications"></ion-icon></div>
+            <div class="match-conetent">Notifications</div>
+        </div>
+        <div class="matches-view" (click)="gotoprivacy()">
+            <div class="match-icon"> <ion-icon ios="ios-lock" md="md-lock"></ion-icon></div>
+            <div class="match-conetent">Privacy</div>
+        </div>
+        <div class="matches-view" (click)="gotoaccount()">
+            <div class="match-icon">  <ion-icon ios="ios-person" md="md-person"></ion-icon></div>
+            <div class="match-conetent"> Account</div>
+        </div>
+    </div>
+    
+  
+  </ion-content>

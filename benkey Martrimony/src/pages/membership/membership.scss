@@ -1,0 +1,303 @@
+page-membership {
+    .toolbar-title-md {
+        padding: 0 12px;
+        text-align: left;
+        font-size: 16px !important;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+    .header-icon{
+        color:#ffffff !important;
+    }
+    #ion-diagnostics-toast .ion-diagnostics-toast-message{
+        padding:0px !important;
+    }
+   
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+    }
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: blue !important;
+}
+    .segment-md .segment-button ion-icon {
+        font-size: 22px;
+        line-height: 0rem;
+    }
+    .segment-md .segment-button{
+        color:#eae6e6 !important;
+    }
+    .SwipedTabs-tabs ion-segment-button
+    {
+        border:none !important;
+        color:#1e1e1e !important;
+        background-color:white!important;
+
+    }
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:#780000 !important;
+    }
+    .SwipedTabs-tabs
+    {
+        width: fit-content !important;
+        border-bottom: none  !important;
+    }
+    .SwipedTabs-indicatorSegment {
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all;
+        -webkit-transform-origin: top 0 left 0;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: none !important;
+        left: 0px;
+        width: 0px!important;
+        transform: translate3d(0%, 0px, 0px);
+    }
+    .segment-md .segment-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 0;
+        height: 36px !important;
+        border-bottom-width: none;
+        border-bottom-style: none;
+        border-bottom-color: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #000000 !important;
+        background-color: transparent;
+        opacity: 0.7;
+        -webkit-transition: 100ms all linear;
+        transition: 100ms all linear;
+        padding: 0 6px;
+        width: 90px !important;
+        font-size: 10px !important;
+    }
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        // height: 46px;
+        text-align: left!important;
+    }
+    .card-md{
+        margin: 0px;
+        width:100%;
+    }
+    .classic-card1{
+        width:100%;
+        float:left;
+    }
+    .classic-card2{
+        width: 15%;
+        float: left;
+    }
+    .classic-card3{
+        width:85%;
+        float:left;
+    }
+    .membership-title{
+        margin: 0% 0 3% 4%;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #222;
+        text-align: left;
+    }
+    .membership-chat-icon{
+        font-size: 15px;
+        border: 1px solid;
+        padding: 5px 5px;
+        border-radius: 80px;
+        color: #ff9c0e;
+    }
+    .membership-icon-phone{
+        font-size: 15px;
+        border: 1px solid;
+        padding: 5px 8px;
+        border-radius: 125px;
+        color: #ff9c0e;
+    }
+    .membership-view-icon{
+        font-size: 15px;
+        border: 1px solid;
+        padding: 5px 5px;
+        border-radius: 80px;
+        color: #9a9896;
+    }
+    .membership-content{
+        margin: 0 0 2px;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 2.5;
+        color: #222;
+        text-align: left;
+    }
+    .card-md{
+        width: 100%;
+        float:left;
+    }
+    .bg{
+        background: #cbc9cd57;
+        width: 100%;
+        float: left; 
+        padding: 0 0 12% 0;       
+    }
+  
+    .tabs{
+        width: 100%;
+        float: left;
+        margin: 0 2%;
+    }
+    .tab-item{
+        color: #000;
+        font-size: 16px;
+        border: 1px solid #dddada;
+        background: #fff;
+        width: 30%;
+        text-align: center;
+        margin: 4px 4px;
+        padding: 4px 0px;
+        float: left;
+    }
+    .tab-item1{
+        color: #000;
+        font-size: 16px;
+        border: 1px solid #dddada;
+        background: #fff;
+        width: 42%;
+        text-align: center;
+        margin: 4px 10px;
+        padding: 4px 0px;
+        float: left;
+    }
+    .active{
+        background: #e56d5f;
+        color: #fff !important;
+        border:1px solid;
+    }
+    .tab-item span{
+        font-size: 11px;
+    }
+    .tab-item p{
+        margin: 0 0;
+        font-size: 11px;
+        font-weight: 500;
+    }
+    .tab-item h5{
+        margin: 0 0;
+        font-size: 16px;
+    }
+
+    .tab-item1 span{
+        font-size: 11px;
+    }
+    .tab-item1 p{
+        margin: 0 0;
+        font-size: 11px;
+        font-weight: 500;
+    }
+    .tab-item1 h5{
+        margin: 0 0;
+        font-size: 16px;
+    }
+    .paynow{
+        width:100%;
+        float: left;
+        padding: 0 4%;
+    }
+    .pay{
+        width: 100%;
+        padding: 6% 0;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+        height: 0px;
+        font-size: 16px;
+    }
+    .footer{
+        width:100%;
+        float:left;
+        background: #d9d2d291;
+        letter-spacing: 1px;
+    }
+    .footer-help{
+        width:30%;
+        float:left;
+        margin: 0 5%;
+    }
+    .footer-phone{
+        width:30%;
+        float:left;
+    }
+    .footer-chat{
+        width:30%;
+        float:left;
+    }
+    .phone-icon{
+        width:15%;
+        float:left;
+        margin-top: -4px !important;
+    }
+    .phone-num{
+        width:80%;
+        float:left;
+    }
+    .chat{
+        width:80%;
+        float:left; 
+    }
+    .footer-help p{
+        font-size: 8px;
+        text-transform: uppercase;
+        color: #868282;
+        margin: 4px 0;
+    }
+    .icon-property{
+        font-size: 10px;
+        color: #797575;
+        margin: 10px 0 0 0;
+    }
+    .phone-num{
+        font-size: 9px;
+        color: #868282;
+    }
+    .chat p{
+        font-size: 8px;
+        text-transform: uppercase;
+        color: #868282;
+    }
+
+    .active h5 {
+        color:#fff !important;
+    }
+    .active p{
+        color:#fff;
+    }
+}

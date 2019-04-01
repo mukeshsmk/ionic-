@@ -1,0 +1,153 @@
+page-blockedprofiles {
+    .inbox-title{
+            margin-top: 0px !important;
+            text-align:  !important;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+    }
+    .toolbar-title {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    .toolbar-title-md {
+    font-size: 16px !important;
+    }
+    .segment-md .segment-button{
+        height: 3.2rem !important;
+    }
+    .inbox-heading{
+        margin: 0;
+        font-size: 14px;
+        color:#ffffff;
+    }
+    .segment-md .segment-button{
+        border:none;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 1px solid #dedede !important; 
+
+} 
+.card{
+    width:100%;
+    float:left;
+}
+.card-1-img{
+    margin: 10px 5px;
+}
+.card-1{
+    width:30%;
+    float:left;
+}
+.card-2{
+    width: 65%;
+    float: left;
+    padding: 2% 0 0 5%;
+}
+.card-md {
+    padding: 5px 10px 0 10px;
+    margin: 0px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 4px solid #f1f1f1;
+}
+.card-md p {
+    margin: 0 0 0px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #060505;
+    font-weight: 400;
+}
+.card-md h2 {
+    margin: 0px 0;
+    font-size: 20px;
+    color: #101010;
+    font-weight: 500;
+}
+.icon-1{
+    width:50%;
+    float:left;
+    text-align: center;
+}
+.icon-star {
+    display: inline-block;
+    font-size: 22px;
+    border: 1px solid #eaeaea;
+    color: #ff9700;
+    padding: 3px 13px;
+    border-radius: 61px;
+}
+.icon-chat{
+    display: inline-block;
+    font-size: 22px;
+    border: 1px solid #eaeaea;
+    color: #a09d9d;
+    padding: 4px 13px 0 13px;
+    border-radius: 61px;
+}
+.like-her{
+    width:50%;
+    float:left;
+    text-align: center;
+}
+.like-her p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top:6px;
+}
+.icon-2{
+    width:100%;
+    float:left;
+    margin-top: 10%;
+}
+.icon-cancel{
+    width:25%;
+    float:left;
+}
+.icon-okey{
+    width:25%;
+    float:left;
+}
+.icon-close{
+    border: 1px solid #c7c4c4;
+    color: #a09d9d;
+    font-size: 25px;
+    padding: 3px 8px;
+    border-radius: 60px;
+}
+.icon-ok{
+    border: 1px solid #ff9c0e;
+    color: #ffffff;
+    background: #ff9c0e;
+    font-size: 25px;
+    padding: 3px 6px;
+    border-radius: 60px;
+}
+
+.premium-members{
+    width: 100%;
+    float: left;
+    padding: 0 12%;
+    text-align: center;
+    margin: 40% 0;
+}
+.important-img{
+    height:60px;
+}
+.premium-members p{
+    font-size: 16px;
+    color: #828282;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.premium-members h5{
+    color: #970000;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+}

@@ -1,0 +1,21 @@
+<ion-header>
+        <ion-navbar>
+            <ion-title>News</ion-title>
+        </ion-navbar>
+      </ion-header>
+      
+      <ion-content class="cards-bg social-cards">
+      <ion-card>
+        <div *ngFor="let s of news" >
+            <ion-card class="product-card" (click)="page(s)">
+                <ion-thumbnail item-left>
+                    <img src="{{s.urlToImage}}" class="list-image" *ngIf="s.urlToImage!=null" />
+                </ion-thumbnail>
+                <h2 class="product-title" *ngIf="s.urlToImage!=null">{{s.title}}</h2>
+                <p class="ingredient" *ngIf="s.urlToImage!=null">{{s.publishedAt}}</p>
+                <p class="description"  *ngIf="s.urlToImage!=null">{{s.description }}</p>
+            </ion-card>
+        </div>
+      </ion-card>
+      </ion-content>
+      

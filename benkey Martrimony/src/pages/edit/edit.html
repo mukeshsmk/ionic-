@@ -1,0 +1,531 @@
+<ion-header>
+
+        <ion-navbar>
+
+                <button ion-button menuToggle>
+                        <ion-icon name="menu"></ion-icon>
+                </button>
+                <ion-title class="inbox-title">EDIT PROFILE</ion-title>
+        </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+        <ion-card> 
+
+                <img src="http://68.66.207.110:8006/getFile/{{picture}}">
+
+
+                <ion-card-content>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header">
+                                                        <ion-icon class="edit-icon" ios="ios-person" md="md-person"></ion-icon> Profile Picture
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotouploadimg()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+                </ion-card-content>
+
+                <!-- <div class="tabs">
+    
+                <a class="tab-item" (click)="toggleButton(1)"><ion-icon name="star-outline"></ion-icon>  Shortlist </a>
+        
+                <a class="tab-item" onclick="document.getElementById('id01').style.display='block'"> <ion-icon ios="ios-call" md="md-call"></ion-icon> Call Now </a>
+        
+                <a class="tab-item" onclick="document.getElementById('id02').style.display='block'">   <ion-icon name="chatbubbles"></ion-icon> Chat Now</a>
+        
+            </div> -->
+
+                <ion-card-content>
+
+                        <h5 class="personal-details">Personal Details</h5>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotoown()">
+                                                        <ion-icon class="edit-icon" ios="ios-create" md="md-create"></ion-icon> In My Own Words
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotoown()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+                        <p class="detail-content">
+                                {{user.About_Me}}
+                        </p>
+
+                </ion-card-content>
+
+                <ion-card-content>
+
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotobasicdetail()">
+                                                        <ion-icon class="edit-icon" name="document"></ion-icon> Basic Details
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotobasicdetail()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"> </ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+
+                        <ion-row>
+                                <ion-col col-5>Name</ion-col>
+                                <ion-col col-7>: {{user.Name}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Gender</ion-col>
+                                <ion-col col-7>: {{user.Gender}} </ion-col>
+                        </ion-row>
+                        <!-- <ion-row><ion-col col-5>Age</ion-col><ion-col col-7>: {{user.DOB}} </ion-col></ion-row> -->
+                        <ion-row>
+                                <ion-col col-5>Height</ion-col>
+                                <ion-col col-7>: {{user.Height}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Weight</ion-col>
+                                <ion-col col-7>: {{user.Weight}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Maritial Status</ion-col>
+                                <ion-col col-7>: {{user.Marrial_Status}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Mother Tongue</ion-col>
+                                <ion-col col-7>: {{user.Language}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Physical Status</ion-col>
+                                <ion-col col-7>: {{user.Physical_Status}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Body Type</ion-col>
+                                <ion-col col-7>: {{user.Body_Type}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Profile Created by</ion-col>
+                                <ion-col col-7>: {{user.Profile_Created_For}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Eating Habits</ion-col>
+                                <ion-col col-7>: {{user.Eating_Habits}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Drinking Habits</ion-col>
+                                <ion-col col-7>: {{user.Drinking_Habits}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Smoking Habits</ion-col>
+                                <ion-col col-7>: {{user.Smoking_Habits}}</ion-col>
+                        </ion-row>
+                </ion-card-content>
+
+
+
+                <!-- <ion-card-content>
+    
+                    <ion-card-title class="detail-header">
+                            <ion-icon class="edit-icon" ios="ios-person" md="md-person"></ion-icon> Basic Details
+                    </ion-card-title>
+                    
+                    <ion-row><ion-col>Contact Number</ion-col><ion-col>: <span class="blur">9878654564</span> |  <ion-icon ios="ios-lock" md="md-lock"></ion-icon></ion-col></ion-row>
+                    <ion-row><ion-col>Chat Status</ion-col><ion-col>: Offline </ion-col></ion-row>
+                    <ion-row><ion-col>Send Mail</ion-col><ion-col>: Locked | <ion-icon ios="ios-lock" md="md-lock"></ion-icon></ion-col></ion-row>
+                   
+                    <ion-grid class="upgrade">
+                            <ion-row><ion-col class="lock"><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-col><ion-col class="unlock">To unlock the contact Details</ion-col><ion-col><button class="upgrade-now" (click)="tomember()" ion-button color="secondary">Upgrade now</button></ion-col></ion-row>    
+                    </ion-grid>
+            </ion-card-content>
+         -->
+
+                <ion-card-content>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotoreligious()">
+                                                        <ion-icon class="edit-icon" name="document"></ion-icon> Religious Information
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotoreligious()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+
+                        <ion-row>
+                                <ion-col col-5>Religion</ion-col>
+                                <ion-col col-7>: {{RI.Religion}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Caste</ion-col>
+                                <ion-col col-7>: {{RI.Caste}}</ion-col>
+                        </ion-row>
+                        <!-- <ion-row><ion-col>Sub Caste</ion-col><ion-col >: {{RI.Highest_Educational_Qualification}}</ion-col></ion-row> -->
+                        <ion-row>
+                                <ion-col col-5>Gothram</ion-col>
+                                <ion-col col-7>: {{RI.Gothram}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Star</ion-col>
+                                <ion-col col-7>: {{RI.Star}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Raasi</ion-col>
+                                <ion-col col-7>: {{RI.Raasi}}</ion-col>
+                        </ion-row>
+                </ion-card-content>
+
+
+                <ion-card-content>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotoprofessional()">
+                                                        <ion-icon class="edit-icon" name="document"></ion-icon> Professional Information
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotoprofessional()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+
+                        <ion-row>
+                                <ion-col col-5>Educational Category</ion-col>
+                                <ion-col col-7>: {{PI.Highest_Educational_Qualification}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Educational in Detail</ion-col>
+                                <ion-col col-7>: {{PI.Educational_in_Detail}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Company Name</ion-col>
+                                <ion-col col-7>: {{PI.Company_Name}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Designation</ion-col>
+                                <ion-col col-7> : {{PI.Designation}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Annual Income </ion-col>
+                                <ion-col col-7>: {{PI.Salary_Per_Annum}}</ion-col>
+                        </ion-row>
+                </ion-card-content>
+
+
+                <ion-card-content>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotolocation()">
+                                                        <ion-icon class="edit-icon" ios="ios-school" md="md-school"></ion-icon>Location
+
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotolocation()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+
+                        <ion-row>
+                                <ion-col col-5>Street</ion-col>
+                                <ion-col col-7>: {{LN.Street}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>City</ion-col>
+                                <ion-col col-7>: {{LN.City}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>State</ion-col>
+                                <ion-col col-7>: {{LN.State}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Country</ion-col>
+                                <ion-col col-7>: India</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>PIN</ion-col>
+                                <ion-col col-7>: {{LN.PIN}}</ion-col>
+                        </ion-row>
+
+                </ion-card-content>
+
+
+                <ion-card-content>
+                        <ion-grid>
+                                <ion-row>
+                                        <ion-col col-9>
+                                                <ion-card-title class="detail-header" (click)="gotofamilydetails()">
+                                                        <ion-icon class="edit-icon" ios="ios-people" md="md-people"></ion-icon>Family Details
+
+                                                </ion-card-title>
+                                        </ion-col>
+                                        <ion-col col-3>
+                                                <button class="editbutton" ion-button (click)="gotofamilydetails()">
+                                                        <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                        </ion-col>
+                                </ion-row>
+                        </ion-grid>
+                        <!-- <ion-row><ion-col>Family Values</ion-col><ion-col >:  {{user.Family_Details.Family_Values}} </ion-col></ion-row> -->
+                        <ion-row>
+                                <ion-col col-5>Family Values</ion-col>
+                                <ion-col col-7>: {{FD.Family_Values}} </ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Family Type</ion-col>
+                                <ion-col col-7>: {{FD.Family_Type}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Family Status</ion-col>
+                                <ion-col col-7>: {{FD.Family_Status}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Father's Occupation</ion-col>
+                                <ion-col col-7>: {{FD.Father_s_Occupation}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>mother's Occupation</ion-col>
+                                <ion-col col-7>: {{FD.Mother_s_Occupation}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Number of Brothers </ion-col>
+                                <ion-col col-7>: {{FD.Num_of_Brothers}}</ion-col>
+                        </ion-row>
+                        <ion-row>
+                                <ion-col col-5>Number of Sisters</ion-col>
+                                <ion-col col-7>: {{FD.Num_of_Sisters}}</ion-col>
+                        </ion-row>
+                </ion-card-content>
+
+
+        </ion-card>
+
+        <ion-card-content>
+                <h5 class="personal-details">PARTNER PREFERENCE</h5>
+
+                <ion-grid>
+                        <ion-row>
+                                <ion-col col-9>
+
+                                        <ion-card-title class="detail-header" (click)="gotopartnerbasicdetails()">
+                                                <ion-icon class="edit-icon" name="document"></ion-icon> Basic Details
+                                        </ion-card-title>
+                                </ion-col>
+                                <ion-col col-3>
+                                        <button class="editbutton" ion-button (click)="gotopartnerbasicdetails()">
+                                                <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                </ion-col>
+                        </ion-row>
+                </ion-grid>
+                <ion-row>
+                        <ion-col col-5>Age</ion-col>
+                        <ion-col col-7>: {{P_BD.Age_From}} - {{P_BD.Age_To}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Height</ion-col>
+                        <ion-col col-7>: {{P_BD.Height_From}} - {{P_BD.Height_To}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Weight</ion-col>
+                        <ion-col col-7>: {{P_BD.Weight_From}} - {{P_BD.Weight_To}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Maritial Status</ion-col>
+                        <ion-col col-7>: {{P_BD.Marrial_Status}} </ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Mother Tongue</ion-col>
+                        <ion-col col-7>: {{P_BD.Language}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Physical Status</ion-col>
+                        <ion-col col-7>: {{P_BD.Physical_Status}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Eating Habits</ion-col>
+                        <ion-col col-7>: {{P_BD.Eating_Habits}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Drinking Habits</ion-col>
+                        <ion-col col-7>: {{P_BD.Drinking_Habits}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Smoking Habits</ion-col>
+                        <ion-col col-7>: {{P_BD.Smoking_Habits}}</ion-col>
+                </ion-row>
+        </ion-card-content>
+
+        <ion-card-content>
+
+                <ion-grid>
+                        <ion-row>
+                                <ion-col col-9>
+                                        <ion-card-title class="detail-header" (click)="gotopartnerreligious()">
+                                                <ion-icon class="edit-icon" name="document"></ion-icon> Religious Information
+                                        </ion-card-title>
+                                </ion-col>
+                                <ion-col col-3>
+                                        <button class="editbutton" ion-button (click)="gotopartnerreligious()">
+                                                <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                </ion-col>
+                        </ion-row>
+                </ion-grid>
+                <ion-row>
+                        <ion-col col-5>Religion</ion-col>
+                        <ion-col col-7>: {{P_RI.Religion}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Caste</ion-col>
+                        <ion-col col-7>: {{P_RI.Caste}}</ion-col>
+                </ion-row>
+                <!-- <ion-row><ion-col>Sub Caste</ion-col><ion-col >: Any</ion-col></ion-row> -->
+                <ion-row>
+                        <ion-col col-5>Gothram</ion-col>
+                        <ion-col col-7>: {{P_RI.Gothram}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Star</ion-col>
+                        <ion-col col-7>: {{P_RI.Star}} </ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Raasi</ion-col>
+                        <ion-col col-7>: {{P_RI.Raasi}}</ion-col>
+                </ion-row>
+        </ion-card-content>
+
+
+
+        <!-- <ion-card-content>
+            <ion-grid>
+                 <ion-row>
+                    <ion-col col-9>
+                            <ion-card-title class="detail-header" (click)="gotoprofessionalpreferance()">
+                                    <ion-icon class="edit-icon" name="document"></ion-icon> Professional Information
+                            </ion-card-title>
+                    </ion-col>
+                    <ion-col col-3>
+                    <button class="editbutton" ion-button (click)="gotoprofessionalpreferance()"><ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                    </ion-col>
+                 </ion-row>
+            </ion-grid>       
+                <ion-row><ion-col>Educational </ion-col><ion-col>:  Any</ion-col></ion-row>
+                <ion-row><ion-col>Occupation</ion-col><ion-col>:  Any</ion-col></ion-row>
+                <ion-row><ion-col>Emplyed In </ion-col><ion-col>:  Any</ion-col></ion-row>
+        </ion-card-content> -->
+
+
+        <ion-card-content>
+                <ion-grid>
+                        <ion-row>
+                                <ion-col col-9>
+                                        <ion-card-title class="detail-header" (click)="gotolocationpreference()">
+                                                <ion-icon class="edit-icon" ios="ios-school" md="md-school"></ion-icon>Location
+
+                                        </ion-card-title>
+                                </ion-col>
+                                <ion-col col-3>
+                                        <button class="editbutton" ion-button (click)="gotolocationpreference()">
+                                                <ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                                </ion-col>
+                        </ion-row>
+                </ion-grid>
+                <ion-row>
+                        <ion-col col-5>Country</ion-col>
+                        <ion-col col-7>: {{P_LN.Birth_Country}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Residing State</ion-col>
+                        <ion-col col-7>: {{P_LN.State}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>Residing City</ion-col>
+                        <ion-col col-7>: {{P_LN.City}}</ion-col>
+                </ion-row>
+                <ion-row>
+                        <ion-col col-5>PIN</ion-col>
+                        <ion-col col-7>: {{P_LN.PIN}}</ion-col>
+                </ion-row>
+
+        </ion-card-content>
+
+
+        <!-- <ion-card-content>
+    
+            <ion-grid>
+                            <ion-row>
+                            <ion-col col-9>  
+                            <ion-card-title class="detail-header" (click)="gotoprofessionalpreferance()">
+                                    <ion-icon class="edit-icon" ios="ios-create" md="md-create"></ion-icon> Description
+                            </ion-card-title>
+                            </ion-col>
+                            <ion-col col-3>
+                                    <button class="editbutton" ion-button (click)="gotoown()"><ion-icon class="edit-icon1" ios="ios-create" md="md-create"></ion-icon> Edit</button>
+                            </ion-col>
+                            </ion-row>
+                    </ion-grid>
+                    <p class="detail-content">
+                           {{P_Desc.Description}}
+                    </p>
+            
+            </ion-card-content> -->
+
+
+
+
+        <!-- <div class="w3-container">
+                
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                  <div class="popup-img">
+                    <img class="partner" src="assets/imgs/13.png" style="margin-top: 20px;">
+                    <p> Kavya</p>
+                  </div>
+                </header>
+                <div class="w3-container">
+                   <div class="popup-contact">
+                    <p>Contact kavya on</p>
+                    <p><ion-icon class="popup-icon" ios="ios-call" md="md-call"></ion-icon> +91 9510XXXXXX</p>
+                    <button (click)="tomember()" ion-button color="secondary" clear>UPGRADE NOW</button>
+                   </div>
+                </div>
+              </div>
+            </div>
+    
+            <div id="id02" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-top w3-card-4">
+                      <header class="w3-container w3-teal"> 
+                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <div class="popup-img">
+                          <img class="partner" src="assets/imgs/13.png" style="margin-top: 20px;">
+                          <p> Kavya</p>
+                        </div>
+                      </header>
+                      <div class="w3-container">
+                         <div class="popup-contact">
+                          <p>Chat kavya on</p>
+                          <p>Comming Soon</p>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+          </div> -->
+        <button (click)="logout()" class="logout" ion-button color="secondary" clear>Logout</button>
+</ion-content>

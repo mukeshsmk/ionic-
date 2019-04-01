@@ -1,0 +1,31 @@
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="inbox-title">27X7 HELP CENTER</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row (click)="gotofaq()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/help/1.png"></ion-col><ion-col class="privacy-content" col-10> FAQ</ion-col>
+        </ion-row>
+        <ion-row (click)="gotofeedback()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/help/2.png"></ion-col><ion-col class="privacy-content" col-10> Feedback</ion-col>
+        </ion-row>
+        <!-- <ion-row (click)="gotochat()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/help/3.png"></ion-col><ion-col class="privacy-content" col-10> 24x7 chat</ion-col>
+        </ion-row> -->
+        <ion-row (click)="gotobranches()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/help/4.png"></ion-col><ion-col class="privacy-content" col-10> Branch Locator</ion-col>
+        </ion-row>
+       
+      </ion-grid>
+   
+       
+ 
+</ion-content>

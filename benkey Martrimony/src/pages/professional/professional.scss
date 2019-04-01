@@ -1,0 +1,108 @@
+page-professional {
+    .toolbar-title {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    .input-wrapper {
+        margin-left: 0% !important;
+    }
+    .find{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0px;
+    }
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 52%;
+          width: 100%;
+          color: #fff;
+        }
+      
+      }
+      .banner-img{
+        max-width: 110%;
+        border: 0;
+        position: relative;
+        right: 5%;
+        top: -15px;
+      }
+      .top-title{
+          margin: 0 0;
+      }
+    .item-md {
+        padding-left: 0px;
+    }
+    .label-md-primary, .item-input .label-md-primary, .item-select .label-md-primary, .item-datetime .label-md-primary {
+        color: #999999 !important;
+        font-size: 12px !important;
+    }
+    .label-md[stacked], .label-md[floating] {
+        margin-left: 0;
+        margin-bottom: 0;
+        font-size: 12px!important;
+    }
+    .button-round-md {
+        border-radius: 64px;
+        padding: 0 21%;
+        margin: 12% 20% 0 20%;
+        background: linear-gradient(to right, #d30000, #350000);
+        font-size: 16px;
+    }
+    .terms{
+        text-align: center;
+        font-size: 12px;
+    }
+    .conditions{
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    .input-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        border-bottom: 1px solid #999999;
+    }
+    .item-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        border-bottom: 1px solid #999999;
+    }
+    .button-md {
+        border-radius: 64px;
+        overflow: hidden;
+        height: 2.5rem;
+        font-size: 16px;
+        
+    }
+}

@@ -1,0 +1,74 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+       
+    <ion-list>
+    <h4 class="top-title">PROFESSIONAL INFORMATION</h4>
+        
+          <ion-item>
+            <ion-label color="primary" floating>HIGHEST EDUCATION</ion-label>
+            <ion-select [(ngModel)]="authForm.Highest_Educational_Qualification" okText="Done" cancelText="Cancel">
+              <ion-option>BE</ion-option>
+              <ion-option>B.Arch</ion-option>
+              <ion-option>B.Tech</ion-option>
+              <ion-option>B.S</ion-option>
+              <ion-option>MCA</ion-option>
+              <ion-option>ME</ion-option>
+              <ion-option>M.TECH</ion-option>
+              <ion-option>B.Com</ion-option>
+              <ion-option>M.Com</ion-option>
+              <ion-option>Diploma</ion-option>
+              <ion-option>Phd</ion-option>
+              <ion-option>Polytechnic</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>ENTER EDUCTION IN DETAIL</ion-label>
+            <ion-textarea #myInput id="myInput" rows="1" maxLength="500"  (keyup)="resize()" [(ngModel)]="authForm.Educational_in_Detail"></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+              <ion-label color="primary" floating>COMPANY NAME</ion-label>
+              <ion-input type="text" [(ngModel)]="authForm.Company_Name" required ></ion-input>
+          </ion-item>
+
+          <!-- <ion-item>
+            <ion-label floating>ENTER EDUCTION IN DETAIL</ion-label>
+            <ion-textarea #myInput id="myInput" rows="1" maxLength="500" (keyup)="resize()" [(ngModel)]="model"></ion-textarea>
+          </ion-item> -->
+
+          <ion-item>
+              <ion-label color="primary" floating>DESIGNATION</ion-label>
+              <ion-input type="text" [(ngModel)]="authForm.Designation"  required ></ion-input>
+          </ion-item>
+
+        
+    
+          <ion-item>
+              <ion-label color="primary" floating>ANNUAL INCOME</ion-label>
+              <ion-input type="text" [(ngModel)]="authForm.Salary_Per_Annum" required ></ion-input>
+          </ion-item>
+
+         
+      
+        <button (click)="save()" ion-button round>SAVE</button>
+
+      </ion-list>
+
+  </ion-content>
+
+
+
+
+  

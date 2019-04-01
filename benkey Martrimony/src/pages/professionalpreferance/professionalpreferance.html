@@ -1,0 +1,31 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+     
+    <ion-list>
+    <h4 class="top-title">PROFESSIONAL PREFERENCE</h4>
+        
+
+    <ion-item>
+      <ion-label color="primary" floating>WHAT I AM LOOKING FOR</ion-label>
+      <ion-input type="text" [(ngModel)]="authForm.description" required ></ion-input>
+  </ion-item>
+
+          <button  type="submit"  (click)="save()" ion-button round>SAVE</button>
+ </ion-list>
+
+  </ion-content>
+
+
+
+

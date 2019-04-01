@@ -1,0 +1,47 @@
+page-aboutmyfamily{
+    .card-md{
+    margin: 0px;
+    width:100%;
+}
+.toolbar-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+ion-card {
+    position: relative;
+    text-align: center;
+  }
+  .card{
+      width:100%;
+      float:left;
+  }
+  .top-title{
+    margin: 20px 0 0 18px;
+}
+.card-title1 {
+    position: absolute;
+    top: 14%;
+    font-size: 18px;
+    right: 39%;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+  .button-clear-md-secondary {
+    border-color: transparent;
+    color: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, from(#d30000), to(#350000));
+    background: linear-gradient(to right, #d30000, #350000);
+    height: 1px;
+    padding: 18px 60px;
+    border-radius: 45px;
+    font-size: 14px;
+    margin: 6% 26%;
+}
+.input-wrapper {
+    margin-left: 0%;
+}
+}

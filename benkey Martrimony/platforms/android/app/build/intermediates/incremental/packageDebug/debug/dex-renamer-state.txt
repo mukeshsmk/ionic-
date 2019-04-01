@@ -1,0 +1,4 @@
+#Sat Aug 18 12:38:14 IST 2018
+base.0=F\:\\Mukesh smk\\Tasks\\matriapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=F\:\\Mukesh smk\\Tasks\\matriapp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

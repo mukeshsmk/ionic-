@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-navbar>
+    
+    <ion-title class="login">SIGN UP</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+  <img class="banner-img" src="assets/imgs/banner.jpg">
+
+  <form (ngSubmit)="signup()" [formGroup]="authForm">
+    <ion-list>
+
+      <h6 class="find">Find the perfect match-register free!</h6>
+
+
+      <ion-item>
+        <ion-label color="primary" floating>NAME</ion-label>
+        <ion-input type="text" formControlName="Name" required></ion-input>
+      </ion-item>
+      <div class="error-box" *ngIf="authForm.controls['Name'].hasError('required') && authForm.controls['Name'].touched">* Username is required!</div>
+      <div class="error-box" *ngIf="authForm.controls['Name'].hasError('minlength') && authForm.controls['Name'].touched">* Minimum username length is 5!</div>
+      <div class="error-box" *ngIf="authForm.controls['Name'].hasError('maxlength') && authForm.controls['Name'].touched">* Maximum username length is 10!</div>
+      
+      <ion-item>
+        <ion-label color="primary" floating>PROFILE CREATED FOR</ion-label>
+        <ion-select formControlName="Profile_Created_For" required okText="Done" cancelText="Cancel">
+          <ion-option>My self</ion-option>
+          <ion-option>Son</ion-option>
+          <ion-option>Daughter</ion-option>
+          <ion-option>Brother</ion-option>
+          <ion-option>Sister</ion-option>
+          <ion-option>Relative</ion-option>
+          <ion-option>Freind</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="primary" floating>GENDER</ion-label>
+        <ion-select formControlName="Gender" okText="Done" cancelText="Cancel">
+          <ion-option>Male</ion-option>
+          <ion-option>Female</ion-option>
+        </ion-select>
+      </ion-item>
+
+  
+      <ion-item>
+
+        <ion-label color="primary" floating>RELIGION</ion-label>
+        <ion-select formControlName="Religion" okText="Done" cancelText="Cancel">
+          <ion-option *ngFor="let r of religion">{{r}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>MOTHER TONGUE</ion-label>
+        <ion-select formControlName="Language" okText="Done" cancelText="Cancel">
+          <ion-option *ngFor="let l of language">{{l}}</ion-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>DRINKING HABITS</ion-label>
+        <ion-select formControlName="Drinking_Habits" okText="Done" cancelText="Cancel">
+          <ion-option>Yes</ion-option>
+          <ion-option>No</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>SMOKING HABITS</ion-label>
+        <ion-select formControlName="Smoking_Habits" okText="Done" cancelText="Cancel">
+          <ion-option>Yes</ion-option>
+          <ion-option>No</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>EATING HABITS</ion-label>
+        <ion-select formControlName="Eating_Habits" okText="Done" cancelText="Cancel">
+          <ion-option>Vegitarian</ion-option>
+          <ion-option>Non-Vegiterian</ion-option>
+          <ion-option>Eggetarian</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label color="primary" floating>CITY</ion-label>
+        <ion-select formControlName="City" okText="Done" cancelText="Cancel">
+          <ion-option *ngFor="let ci of city">{{ci}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label color="primary" floating>STATE</ion-label>
+        <ion-select formControlName="State" okText="Done" cancelText="Cancel">
+          <ion-option *ngFor="let st of state">{{st}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>PINCODE</ion-label>
+        <ion-input type="text" formControlName="PIN"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>MOBILE NUMBER</ion-label>
+        <ion-input type="number" max="10" formControlName="Mobile" required></ion-input>
+      </ion-item>
+      <div class="error-box" *ngIf="authForm.controls['Mobile'].hasError('required') && authForm.controls['Mobile'].touched">Sorry, field mobile number is required!</div>
+      <div class="error-box" *ngIf="authForm.controls['Mobile'].hasError('minlength') && authForm.controls['Mobile'].touched">Sorry, minimum  length is 10!</div>
+      <div class="error-box" *ngIf="authForm.controls['Mobile'].hasError('maxlength') && authForm.controls['Mobile'].touched">Sorry, maximum  length is 10!</div>
+      <div class="error-box" *ngIf="authForm.controls['Mobile'].hasError('pattern') && authForm.controls['Mobile'].touched">Sorry, only numbers allowed!</div>   
+      <ion-item>
+        <ion-label color="primary" floating>EMAIL</ion-label>
+        <ion-input type="email" formControlName="Email" required></ion-input>
+      </ion-item>
+      <div class="error-box" *ngIf="authForm.controls['Email'].hasError('required') && authForm.controls['Email'].touched">Sorry, email is required!</div>
+      <div class="error-box" *ngIf="authForm.controls['Email'].hasError('required') && authForm.controls['Email'].touched">Sorry, Please enter valid email!</div>     
+      <ion-item>
+        <ion-label color="primary" floating>PASSWORD</ion-label>
+        <ion-input type="password" formControlName="Password" required></ion-input>
+      </ion-item>
+      <div class="error-box" *ngIf="authForm.controls['Password'].hasError('required') && authForm.controls['Password'].touched">* Password is required!</div>
+      <div class="error-box" *ngIf="authForm.controls['Password'].hasError('minlength') && authForm.controls['Password'].touched">* Minimum Password length is 8!</div>
+      <div class="error-box" *ngIf="authForm.controls['Password'].hasError('checkFirstCharacterValidatorOutput') && authForm.controls['Password'].touched">* Password cant't start with number!</div><br/>
+      
+
+      <p class="terms">By Clicking Continue button, you accept
+        <br> our
+        <span class="conditions">Terms and Conditions </span>
+      </p>
+      <button type="submit" [disabled]="!authForm.valid" (click)="signup()" ion-button round>SIGNUP</button>
+      <p class="login">Have an Account?
+        <span class="login-span" (click)="gotologin()"> Login</span>
+      </p>
+
+    </ion-list>
+  </form>
+</ion-content>

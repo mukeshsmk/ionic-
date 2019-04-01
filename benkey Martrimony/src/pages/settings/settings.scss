@@ -1,0 +1,43 @@
+ page-settings {
+
+    .toolbar-title {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: right;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+   .toolbar-title {
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    .settings{
+        width:100%;
+        float:left;
+        padding: 5% 10%;
+    }
+    .matches-view{
+        width: 100%;
+        float: left;
+        font-size: 16px;
+        line-height: 45px;
+    }
+    .match-icon{
+        width:20%;
+        float:left;
+    }
+    .match-content{
+        width:75%;
+        float:left;
+    }
+    // .radio-md .radio-checked {
+    //     border-color: #850000;
+    //     color:red;
+    // }
+    // .radio-md .radio-inner{
+    //     background-color: #780000; 
+    // }
+}

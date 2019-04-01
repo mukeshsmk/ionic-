@@ -1,0 +1,510 @@
+<ion-header>
+
+        <ion-navbar>
+          
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-segment [(ngModel)]="page" color="dark">
+                <ion-segment-button value="Home" (click)="gotohome()">
+                    <ion-icon class="header-icon" name="home"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="Notifications" (click)="gotonotification()">
+                    <ion-icon class="header-icon" name="notifications-outline"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="Mail" (click)="gotoinbox()">
+                    <ion-icon class="header-icon" name="mail"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="Search">
+                   <ion-icon class="header-icon" name="search"></ion-icon>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-navbar>
+      
+      </ion-header>
+      
+      <ion-content >
+        
+            <ion-searchbar></ion-searchbar>
+            <ion-list>
+              <ion-item *ngFor="let item of items">
+                {{ item }}
+              </ion-item>
+            </ion-list>
+            
+
+            <ion-item>
+                <ion-label>Age</ion-label>
+                <ion-select [(ngModel)]="month">
+                <ion-option value="01">18</ion-option>
+                <ion-option value="02">19</ion-option>
+                <ion-option value="03">20</ion-option>
+                <ion-option value="04">21</ion-option>
+                <ion-option value="05">22</ion-option>
+                <ion-option value="06">23</ion-option>
+                <ion-option value="07">24</ion-option>
+                <ion-option value="08">25</ion-option>
+                <ion-option value="09">26</ion-option>
+                <ion-option value="10">27</ion-option>
+                <ion-option value="11">28</ion-option>
+                <ion-option value="12">29</ion-option>
+                </ion-select>
+
+                <ion-select [(ngModel)]="year">
+                        <ion-option value="01">18</ion-option>
+                        <ion-option value="02">19</ion-option>
+                        <ion-option value="03">20</ion-option>
+                        <ion-option value="04">21</ion-option>
+                        <ion-option value="05">22</ion-option>
+                        <ion-option value="06">23</ion-option>
+                        <ion-option value="07">24</ion-option>
+                        <ion-option value="08">25</ion-option>
+                        <ion-option value="09">26</ion-option>
+                        <ion-option value="10">27</ion-option>
+                        <ion-option value="11">28</ion-option>
+                        <ion-option value="12">29</ion-option>
+                </ion-select>
+
+            </ion-item>
+
+
+
+            <ion-item>
+                    <ion-label>Height</ion-label>
+
+                    <ion-select [(ngModel)]="start">
+
+                    <ion-option value="01">4 ft 6 in</ion-option>
+                    <ion-option value="02">4 ft 7 in</ion-option>
+                    <ion-option value="03">4 ft 8 in</ion-option>
+                    <ion-option value="04">4 ft 9 in</ion-option>
+                    <ion-option value="05">4 ft 0 in</ion-option>
+                    <ion-option value="06">5 ft 1 in</ion-option>
+                    <ion-option value="07">5 ft 2 in</ion-option>
+                    <ion-option value="08">5 ft 3 in</ion-option>
+                    <ion-option value="09">5 ft 4 in</ion-option>
+                    <ion-option value="10">5 ft 5 in</ion-option>
+                    <ion-option value="11">5 ft 6 in</ion-option>
+                    <ion-option value="12">5 ft 7 in</ion-option>
+                    <ion-option value="13">5 ft 8 in</ion-option>
+                    <ion-option value="14">5 ft 9 in</ion-option>
+                    <ion-option value="15">6 ft 0 in</ion-option>
+                    <ion-option value="16">6 ft 1 in</ion-option>
+                    <ion-option value="17">6 ft 2 in</ion-option>
+                    <ion-option value="18">6 ft 3 in</ion-option>
+                    <ion-option value="19">6 ft 4 in</ion-option>
+                    <ion-option value="20">6 ft 5 in</ion-option>
+                    <ion-option value="21">6 ft 6 in</ion-option>
+                    <ion-option value="22">6 ft 7 in</ion-option>
+                    <ion-option value="23">6 ft 8 in</ion-option>
+                    <ion-option value="24">6 ft 9 in</ion-option>
+
+                    </ion-select>
+    
+                    <ion-select [(ngModel)]="end">
+
+                    <ion-option value="01">4 ft 6 in</ion-option>
+                    <ion-option value="02">4 ft 7 in</ion-option>
+                    <ion-option value="03">4 ft 8 in</ion-option>
+                    <ion-option value="04">4 ft 9 in</ion-option>
+                    <ion-option value="05">4 ft 0 in</ion-option>
+                    <ion-option value="06">5 ft 1 in</ion-option>
+                    <ion-option value="07">5 ft 2 in</ion-option>
+                    <ion-option value="08">5 ft 3 in</ion-option>
+                    <ion-option value="09">5 ft 4 in</ion-option>
+                    <ion-option value="10">5 ft 5 in</ion-option>
+                    <ion-option value="11">5 ft 6 in</ion-option>
+                    <ion-option value="12">5 ft 7 in</ion-option>
+                    <ion-option value="13">5 ft 8 in</ion-option>
+                    <ion-option value="14">5 ft 9 in</ion-option>
+                    <ion-option value="15">6 ft 0 in</ion-option>
+                    <ion-option value="16">6 ft 1 in</ion-option>
+                    <ion-option value="17">6 ft 2 in</ion-option>
+                    <ion-option value="18">6 ft 3 in</ion-option>
+                    <ion-option value="19">6 ft 4 in</ion-option>
+                    <ion-option value="20">6 ft 5 in</ion-option>
+                    <ion-option value="21">6 ft 6 in</ion-option>
+                    <ion-option value="22">6 ft 7 in</ion-option>
+                    <ion-option value="23">6 ft 8 in</ion-option>
+                    <ion-option value="24">6 ft 9 in</ion-option>
+                    
+                    </ion-select>
+                    
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label>Marital  Status</ion-label>
+
+                    <ion-select [(ngModel)]="Marital" >
+
+                            <ion-option>Any</ion-option>
+                            <ion-option>Never Married</ion-option>
+                            <ion-option>Windowed</ion-option>
+                            <ion-option>Divorced</ion-option>
+                            <ion-option>Awaiting divorce</ion-option>
+                            
+                    </ion-select>
+                </ion-item>
+
+
+                <ion-item>
+                        <ion-label>Religin</ion-label>
+    
+                        <ion-select [(ngModel)]="religion" >
+    
+                                <ion-option>Hindu</ion-option>
+                                <ion-option>Muslim-Shia</ion-option>
+                                <ion-option>Muslim-others</ion-option>
+                                <ion-option>Cristian</ion-option>
+                                <ion-option>Sikh</ion-option>
+                                <ion-option>Jain-Digamber</ion-option>
+                                <ion-option>Jain-Shwetambar</ion-option>
+                                <ion-option>Jain-Others</ion-option>
+                                <ion-option>Parsi</ion-option>
+                                <ion-option>Buddist</ion-option>
+                                <ion-option>Jewish</ion-option>
+                                <ion-option>Inter-Religion</ion-option>
+                                
+                        </ion-select>
+                </ion-item>
+      
+                <ion-item>
+                        <ion-label>Mother Tongue</ion-label>
+                        <ion-select [(ngModel)]="lang" >
+                          <ion-option>Angika</ion-option>
+                          <ion-option>Arunachali</ion-option>
+                          <ion-option>Assamise</ion-option>
+                          <ion-option>Awadhi</ion-option>
+                          <ion-option>Bengali</ion-option>
+                          <ion-option>Bhojpuri</ion-option>
+                          <ion-option>Brij</ion-option>
+                          <ion-option>Bihari</ion-option>
+                          <ion-option>Badaga</ion-option>
+                          <ion-option>Chatisgarhi</ion-option>
+                          <ion-option>Dogri</ion-option>
+                          <ion-option>English</ion-option>
+                          <ion-option>Frensh</ion-option>
+                          <ion-option>Garhwali</ion-option>
+                          <ion-option>Garo</ion-option>
+                          <ion-option>Gujarati</ion-option>
+                          <ion-option>Haryanvi</ion-option>
+                          <ion-option>Himachali/pahari</ion-option>
+                          <ion-option>Hindi</ion-option>
+                          <ion-option>Kanauji</ion-option>
+                          <ion-option>Kannada</ion-option>
+                          <ion-option>Kashmiri</ion-option>
+                          <ion-option>Khandesi</ion-option>
+                          <ion-option>Khasi</ion-option>
+                          <ion-option>Konkani</ion-option>
+                          <ion-option>Koshali</ion-option>
+                          <ion-option>Kumaoni</ion-option>
+                          <ion-option>Kutchi</ion-option>
+                          <ion-option>Lepcha</ion-option>
+                          <ion-option>Magahi</ion-option>
+                          <ion-option>Maithili</ion-option>
+                          <ion-option>Malayalam</ion-option>
+                          <ion-option>Manipuri</ion-option>
+                          <ion-option>Marathi</ion-option>
+                          <ion-option>Marwari</ion-option>
+                          <ion-option>Miji</ion-option>
+                          <ion-option>Mizo</ion-option>
+                          <ion-option>Monpa</ion-option>
+                          <ion-option>Nicobarese</ion-option>
+                          <ion-option>Nepali</ion-option>
+                          <ion-option>Oriya</ion-option>
+                          <ion-option>Rajasthani</ion-option>
+                          <ion-option>Sanskrit</ion-option>
+                          <ion-option>Santhali</ion-option>
+                          <ion-option>Sandhi</ion-option>
+                          <ion-option>Sourashtra</ion-option>
+                          <ion-option>Tamil</ion-option>
+                          <ion-option>Telungu</ion-option>
+                          <ion-option>Tripuri</ion-option>
+                          <ion-option>Tulu</ion-option>
+                          <ion-option>Urdu</ion-option>
+                        
+                        </ion-select>
+                    </ion-item>
+
+
+                    <ion-item>
+                        <ion-label>Country</ion-label>
+                        <ion-select [(ngModel)]="code">
+                            <ion-option >Algeria (+213)</ion-option>
+                            <ion-option>Andorra (+376)</ion-option>
+                            <ion-option>Angola (+244)</ion-option>
+                            <ion-option>Anguilla (+1264)</ion-option>
+                            <ion-option>Antigua &amp; Barbuda (+1268)</ion-option>
+                            <ion-option>Argentina (+54)</ion-option>
+                            <ion-option>Armenia (+374)</ion-option>
+                            <ion-option>Aruba (+297)</ion-option>
+                            <ion-option>Australia (+61)</ion-option>
+                            <ion-option>Austria (+43)</ion-option>
+                            <ion-option>Azerbaijan (+994)</ion-option>
+                            <ion-option>Bahamas (+1242)</ion-option>
+                            <ion-option>Bahrain (+973)</ion-option>
+                            <ion-option>Bangladesh (+880)</ion-option>
+                            <ion-option>Barbados (+1246)</ion-option>
+                            <ion-option>Belarus (+375)</ion-option>
+                            <ion-option>Belgium (+32)</ion-option>
+                            <ion-option>Belize (+501)</ion-option>
+                            <ion-option>Benin (+229)</ion-option>
+                            <ion-option>Bermuda (+1441)</ion-option>
+                            <ion-option>Bhutan (+975)</ion-option>
+                            <ion-option>Bolivia (+591)</ion-option>
+                            <ion-option>Bosnia Herzegovina (+387)</ion-option>
+                            <ion-option>Botswana (+267)</ion-option>
+                            <ion-option>Brazil (+55)</ion-option>
+                            <ion-option>Brunei (+673)</ion-option>
+                            <ion-option>Bulgaria (+359)</ion-option>
+                            <ion-option>Burkina Faso (+226)</ion-option>
+                            <ion-option>Burundi (+257)</ion-option>
+                            <ion-option>Cambodia (+855)</ion-option>
+                            <ion-option>Cameroon (+237)</ion-option>
+                            <ion-option>Canada (+1)</ion-option>
+                            <ion-option>Cape Verde Islands (+238)</ion-option>
+                            <ion-option>Cayman Islands (+1345)</ion-option>
+                            <ion-option>Central African Republic (+236)</ion-option>
+                            <ion-option>Chile (+56)</ion-option>
+                            <ion-option>China (+86)</ion-option>
+                            <ion-option>Colombia (+57)</ion-option>
+                            <ion-option>Comoros (+269)</ion-option>
+                            <ion-option>Congo (+242)</ion-option>
+                            <ion-option>Cook Islands (+682)</ion-option>
+                            <ion-option>Costa Rica (+506)</ion-option>
+                            <ion-option>Croatia (+385)</ion-option>
+                            <ion-option>Cuba (+53)</ion-option>
+                            <ion-option>Cyprus North (+90392)</ion-option>
+                            <ion-option>Cyprus South (+357)</ion-option>
+                            <ion-option>Czech Republic (+42)</ion-option>
+                            <ion-option>Denmark (+45)</ion-option>
+                            <ion-option>Djibouti (+253)</ion-option>
+                            <ion-option>Dominica (+1809)</ion-option>
+                            <ion-option>Dominican Republic (+1809)</ion-option>
+                            <ion-option>Ecuador (+593)</ion-option>
+                            <ion-option>Egypt (+20)</ion-option>
+                            <ion-option>El Salvador (+503)</ion-option>
+                            <ion-option>Equatorial Guinea (+240)</ion-option>
+                            <ion-option>Eritrea (+291)</ion-option>
+                            <ion-option>Estonia (+372)</ion-option>
+                            <ion-option>Ethiopia (+251)</ion-option>
+                            <ion-option>Falkland Islands (+500)</ion-option>
+                            <ion-option>Faroe Islands (+298)</ion-option>
+                            <ion-option>Fiji (+679)</ion-option>
+                            <ion-option>Finland (+358)</ion-option>
+                            <ion-option>France (+33)</ion-option>
+                            <ion-option>French Guiana (+594)</ion-option>
+                            <ion-option>French Polynesia (+689)</ion-option>
+                            <ion-option >Gabon (+241)</ion-option>
+                            <ion-option >Gambia (+220)</ion-option>
+                            <ion-option >Georgia (+7880)</ion-option>
+                            <ion-option >Germany (+49)</ion-option>
+                            <ion-option >Ghana (+233)</ion-option>
+                            <ion-option >Gibraltar (+350)</ion-option>
+                            <ion-option >Greece (+30)</ion-option>
+                            <ion-option >Greenland (+299)</ion-option>
+                            <ion-option >Grenada (+1473)</ion-option>
+                            <ion-option >Guadeloupe (+590)</ion-option>
+                            <ion-option >Guam (+671)</ion-option>
+                            <ion-option >Guatemala (+502)</ion-option>
+                            <ion-option >Guinea (+224)</ion-option>
+                            <ion-option >Guinea - Bissau (+245)</ion-option>
+                            <ion-option >Guyana (+592)</ion-option>
+                            <ion-option >Haiti (+509)</ion-option>
+                            <ion-option >Honduras (+504)</ion-option>
+                            <ion-option >Hong Kong (+852)</ion-option>
+                            <ion-option >Hungary (+36)</ion-option>
+                            <ion-option >Iceland (+354)</ion-option>
+                            <ion-option >India (+91)</ion-option>
+                            <ion-option >Indonesia (+62)</ion-option>
+                            <ion-option >Iran (+98)</ion-option>
+                            <ion-option >Iraq (+964)</ion-option>
+                            <ion-option >Ireland (+353)</ion-option>
+                            <ion-option >Israel (+972)</ion-option>
+                            <ion-option >Italy (+39)</ion-option>
+                            <ion-option >Jamaica (+1876)</ion-option>
+                            <ion-option >Japan (+81)</ion-option>
+                            <ion-option >Jordan (+962)</ion-option>
+                            <ion-option >Kazakhstan (+7)</ion-option>
+                            <ion-option >Kenya (+254)</ion-option>
+                            <ion-option >Kiribati (+686)</ion-option>
+                            <ion-option >Korea North (+850)</ion-option>
+                            <ion-option >Korea South (+82)</ion-option>
+                            <ion-option >Kuwait (+965)</ion-option>
+                            <ion-option >Kyrgyzstan (+996)</ion-option>
+                            <ion-option >Laos (+856)</ion-option>
+                            <ion-option >Latvia (+371)</ion-option>
+                            <ion-option >Lebanon (+961)</ion-option>
+                            <ion-option >Lesotho (+266)</ion-option>
+                            <ion-option >Liberia (+231)</ion-option>
+                            <ion-option >Libya (+218)</ion-option>
+                            <ion-option >Liechtenstein (+417)</ion-option>
+                            <ion-option >Lithuania (+370)</ion-option>
+                            <ion-option >Luxembourg (+352)</ion-option>
+                            <ion-option >Macao (+853)</ion-option>
+                            <ion-option >Macedonia (+389)</ion-option>
+                            <ion-option >Madagascar (+261)</ion-option>
+                            <ion-option >Malawi (+265)</ion-option>
+                            <ion-option >Malaysia (+60)</ion-option>
+                            <ion-option >Maldives (+960)</ion-option>
+                            <ion-option >Mali (+223)</ion-option>
+                            <ion-option >Malta (+356)</ion-option>
+                            <ion-option >Marshall Islands (+692)</ion-option>
+                            <ion-option >Martinique (+596)</ion-option>
+                            <ion-option >Mauritania (+222)</ion-option>
+                            <ion-option >Mayotte (+269)</ion-option>
+                            <ion-option >Mexico (+52)</ion-option>
+                            <ion-option >Micronesia (+691)</ion-option>
+                            <ion-option >Moldova (+373)</ion-option>
+                            <ion-option >Monaco (+377)</ion-option>
+                            <ion-option >Mongolia (+976)</ion-option>
+                            <ion-option >Montserrat (+1664)</ion-option>
+                            <ion-option >Morocco (+212)</ion-option>
+                            <ion-option >Mozambique (+258)</ion-option>
+                            <ion-option >Myanmar (+95)</ion-option>
+                            <ion-option >Namibia (+264)</ion-option>
+                            <ion-option >Nauru (+674)</ion-option>
+                            <ion-option >Nepal (+977)</ion-option>
+                            <ion-option >Netherlands (+31)</ion-option>
+                            <ion-option >New Caledonia (+687)</ion-option>
+                            <ion-option >New Zealand (+64)</ion-option>
+                            <ion-option >Nicaragua (+505)</ion-option>
+                            <ion-option >Niger (+227)</ion-option>
+                            <ion-option >Nigeria (+234)</ion-option>
+                            <ion-option >Niue (+683)</ion-option>
+                            <ion-option >Norfolk Islands (+672)</ion-option>
+                            <ion-option >Northern Marianas (+670)</ion-option>
+                            <ion-option >Norway (+47)</ion-option>
+                            <ion-option >Oman (+968)</ion-option>
+                            <ion-option >Palau (+680)</ion-option>
+                            <ion-option >Panama (+507)</ion-option>
+                            <ion-option >Papua New Guinea (+675)</ion-option>
+                            <ion-option >Paraguay (+595)</ion-option>
+                            <ion-option >Peru (+51)</ion-option>
+                            <ion-option >Philippines (+63)</ion-option>
+                            <ion-option >Poland (+48)</ion-option>
+                            <ion-option >Portugal (+351)</ion-option>
+                            <ion-option >Puerto Rico (+1787)</ion-option>
+                            <ion-option >Qatar (+974)</ion-option>
+                            <ion-option >Reunion (+262)</ion-option>
+                            <ion-option >Romania (+40)</ion-option>
+                            <ion-option >Russia (+7)</ion-option>
+                            <ion-option >Rwanda (+250)</ion-option>
+                            <ion-option >San Marino (+378)</ion-option>
+                            <ion-option >Sao Tome &amp; Principe (+239)</ion-option>
+                            <ion-option >Saudi Arabia (+966)</ion-option>
+                            <ion-option >Senegal (+221)</ion-option>
+                            <ion-option >Serbia (+381)</ion-option>
+                            <ion-option >Seychelles (+248)</ion-option>
+                            <ion-option >Sierra Leone (+232)</ion-option>
+                            <ion-option >Singapore (+65)</ion-option>
+                            <ion-option >Slovak Republic (+421)</ion-option>
+                            <ion-option >Slovenia (+386)</ion-option>
+                            <ion-option >Solomon Islands (+677)</ion-option>
+                            <ion-option >Somalia (+252)</ion-option>
+                            <ion-option >South Africa (+27)</ion-option>
+                            <ion-option >Spain (+34)</ion-option>
+                            <ion-option >Sri Lanka (+94)</ion-option>
+                            <ion-option >St. Helena (+290)</ion-option>
+                            <ion-option >St. Kitts (+1869)</ion-option>
+                            <ion-option >St. Lucia (+1758)</ion-option>
+                            <ion-option >Sudan (+249)</ion-option>
+                            <ion-option >Suriname (+597)</ion-option>
+                            <ion-option >Swaziland (+268)</ion-option>
+                            <ion-option >Sweden (+46)</ion-option>
+                            <ion-option >Switzerland (+41)</ion-option>
+                            <ion-option >Syria (+963)</ion-option>
+                            <ion-option >Taiwan (+886)</ion-option>
+                            <ion-option >Tajikstan (+7)</ion-option>
+                            <ion-option >Thailand (+66)</ion-option>
+                            <ion-option >Togo (+228)</ion-option>
+                            <ion-option >Tonga (+676)</ion-option>
+                            <ion-option >Trinidad &amp; Tobago (+1868)</ion-option>
+                            <ion-option >Tunisia (+216)</ion-option>
+                            <ion-option >Turkey (+90)</ion-option>
+                            <ion-option >Turkmenistan (+7)</ion-option>
+                            <ion-option >Turkmenistan (+993)</ion-option>
+                            <ion-option >Turks &amp; Caicos Islands (+1649)</ion-option>
+                            <ion-option >Tuvalu (+688)</ion-option>
+                            <ion-option >Uganda (+256)</ion-option>
+                            <ion-option >UK (+44)</ion-option>
+                            <ion-option >Ukraine (+380)</ion-option>
+                            <ion-option >United Arab Emirates (+971)</ion-option>
+                            <ion-option >Uruguay (+598)</ion-option>
+                            <ion-option >USA (+1)</ion-option>
+                            <ion-option >Uzbekistan (+7)</ion-option>
+                            <ion-option >Vanuatu (+678)</ion-option>
+                            <ion-option >Vatican City (+379)</ion-option>
+                            <ion-option >Venezuela (+58)</ion-option>
+                            <ion-option >Vietnam (+84)</ion-option>
+                            <ion-option >Virgin Islands - British (+1284)</ion-option>
+                            <ion-option >Virgin Islands - US (+1340)</ion-option>
+                            <ion-option >Wallis &amp; Futuna (+681)</ion-option>
+                            <ion-option >Yemen (North)(+969)</ion-option>
+                            <ion-option >Yemen (South)(+967)</ion-option>
+                            <ion-option >Zambia (+260)</ion-option>
+                            <ion-option >Zimbabwe (+263)</ion-option>
+                        </ion-select>
+                    </ion-item>
+
+                    
+
+                    <ion-item>
+                        <ion-label>Caste</ion-label>
+    
+                        <ion-select [(ngModel)]="religion" >
+    
+                                <ion-option>Any</ion-option>
+                                <ion-option>Never Married</ion-option>
+                                <ion-option>Windowed</ion-option>
+                                <ion-option>Divorced</ion-option>
+                                <ion-option>Awaiting divorce</ion-option>
+                                
+                        </ion-select>
+                </ion-item>
+
+
+
+
+
+
+
+
+
+
+                <div class="w3-container">
+            
+                    <div id="id01" class="w3-modal">
+                      <div class="w3-modal-content w3-animate-top w3-card-4">
+                        <header class="w3-container w3-teal"> 
+                          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        </header>
+                        <div class="w3-container">
+                           <div class="popup-contact">
+                            <h5>My Saved Search</h5>
+                            <p> No Saved Searches Found</p>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+      </ion-content>
+
+      <ion-footer>
+        <div class="search">
+            <div class="save-search" (click)="doPrompt()">
+                <img src="assets/imgs/file.png" style="height: 24px;">
+                <p>Save Search</p>
+            </div>
+            <div class="my-save" onclick="document.getElementById('id01').style.display='block'">
+                <img src="assets/imgs/save.png" style="height: 24px;">
+                <p>My saved search</p>
+            </div>
+            <div class="search-now" (click)="gotohome()">
+                    <ion-icon ios="ios-search" md="md-search"></ion-icon> Search Now
+            </div>
+        </div>
+      </ion-footer>
+      

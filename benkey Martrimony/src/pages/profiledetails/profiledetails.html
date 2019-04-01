@@ -1,0 +1,251 @@
+<ion-header>
+
+    <ion-navbar>
+
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="inbox-title">H7167576</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <div class="card">
+            <img src="assets/imgs/13.jpg" imageViewer>
+            <div class="card-title1">Kavya</div>
+            <div class="card-subtitle">20 Yrs,5'9',Delhi / NCR,India</div>
+        </div>
+
+        <div class="tabs">
+
+            <a class="tab-item" (click)="toggleButton(1)"><ion-icon name="star-outline"></ion-icon>  Shortlist </a>
+    
+            <a class="tab-item" onclick="document.getElementById('id01').style.display='block'"> <ion-icon ios="ios-call" md="md-call"></ion-icon> Call Now </a>
+    
+            <a class="tab-item" onclick="document.getElementById('id02').style.display='block'">   <ion-icon name="chatbubbles"></ion-icon> Chat Now</a>
+    
+        </div>
+    
+        <ion-card-content>
+
+            <h5 class="personal-details">Personal Details</h5>
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" ios="ios-create" md="md-create"></ion-icon> In My Own Words
+            </ion-card-title>
+            <p class="detail-content">
+                    My sister has completed her Bachelor's degree. She is currently not working and she lives in Vadakkuvalliyur. We come from a middle class, joint family background with moderate values. she s very much interested in agriculture and dairy farming
+            </p>
+
+        </ion-card-content>
+
+        <ion-card-content>
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" name="document"></ion-icon> Basic Details
+                </ion-card-title>
+                
+                <ion-row><ion-col>Name</ion-col><ion-col>: Kavya</ion-col></ion-row>
+                <ion-row><ion-col>Gender</ion-col><ion-col>: Female</ion-col></ion-row>
+                <ion-row><ion-col>Age</ion-col><ion-col>: 20 yrs</ion-col></ion-row>
+                <ion-row><ion-col>Height</ion-col><ion-col>: 5 Ft 9 in / 175 Cms</ion-col></ion-row>
+                <ion-row><ion-col>Weight</ion-col><ion-col>: 65 kgs / 143 lbs </ion-col></ion-row>
+                <ion-row><ion-col>Maritial Status</ion-col><ion-col>: Never Married</ion-col></ion-row>
+                <ion-row><ion-col>Mother Tongue</ion-col><ion-col>: Tamil</ion-col></ion-row>
+                <ion-row><ion-col>Physical Status</ion-col><ion-col>: Normal</ion-col></ion-row>
+                <ion-row><ion-col>Body Type</ion-col><ion-col>: Average</ion-col></ion-row>
+                <ion-row><ion-col>Complexion</ion-col><ion-col>: Wheatish</ion-col></ion-row>
+                <ion-row><ion-col>Profile Created by</ion-col><ion-col>: Myself</ion-col></ion-row>
+                <ion-row><ion-col>Eating Habits</ion-col><ion-col>: Eggetarian</ion-col></ion-row>
+                <ion-row><ion-col>Drinking Habits</ion-col><ion-col>: Never Drinks</ion-col></ion-row>
+                <ion-row><ion-col>Smoking Habits</ion-col><ion-col>: Never Smokes</ion-col></ion-row>
+        </ion-card-content>
+
+
+
+        <ion-card-content>
+
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" ios="ios-person" md="md-person"></ion-icon> Basic Details
+                </ion-card-title>
+                
+                <ion-row><ion-col>Contact Number</ion-col><ion-col>: <span class="blur">9878654564</span> |  <ion-icon ios="ios-lock" md="md-lock"></ion-icon></ion-col></ion-row>
+                <ion-row><ion-col>Chat Status</ion-col><ion-col>: Offline </ion-col></ion-row>
+                <ion-row><ion-col>Send Mail</ion-col><ion-col>: Locked | <ion-icon ios="ios-lock" md="md-lock"></ion-icon></ion-col></ion-row>
+               
+                <ion-grid class="upgrade">
+                        <ion-row><ion-col class="lock"><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-col><ion-col class="unlock">To unlock the contact Details</ion-col><ion-col><button class="upgrade-now" (click)="gotomember()" ion-button color="secondary">Upgrade now</button></ion-col></ion-row>    
+                </ion-grid>
+        </ion-card-content>
+    
+
+        <ion-card-content>
+
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" name="document"></ion-icon> Religious Information
+                </ion-card-title>
+                
+                <ion-row><ion-col>Religion</ion-col><ion-col>: Hindu</ion-col></ion-row>
+                <ion-row><ion-col>Caste</ion-col><ion-col>: Some</ion-col></ion-row>
+                <ion-row><ion-col>Sub Caste</ion-col><ion-col>: Don't Know sub-caste</ion-col></ion-row>
+                <ion-row><ion-col>Gothram</ion-col><ion-col>:  Send Request</ion-col></ion-row>
+                <ion-row><ion-col>Star</ion-col><ion-col>: Send Request </ion-col></ion-row>
+                <ion-row><ion-col>Raasi</ion-col><ion-col>: Kark</ion-col></ion-row>
+        </ion-card-content>
+
+
+        <ion-card-content>
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" name="document"></ion-icon> Professional Information
+                </ion-card-title>
+                
+                <ion-row><ion-col>Educational Category</ion-col><ion-col>:  B.E</ion-col></ion-row>
+                <ion-row><ion-col>Educational in Detail</ion-col><ion-col>:  Send Request</ion-col></ion-row>
+                <ion-row><ion-col>Occupation</ion-col><ion-col>:  Student</ion-col></ion-row>
+                <ion-row><ion-col>Emplyed In </ion-col><ion-col>:  Not Working</ion-col></ion-row>
+        </ion-card-content>
+
+
+        <ion-card-content>
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" ios="ios-school" md="md-school"></ion-icon>Location
+                         
+                </ion-card-title>
+                
+                <ion-row><ion-col>Country</ion-col><ion-col>:  India</ion-col></ion-row>
+                <ion-row><ion-col>State</ion-col><ion-col>: Delhi/NCR</ion-col></ion-row>
+                <ion-row><ion-col>Citizenship</ion-col><ion-col>:  India</ion-col></ion-row>
+               
+        </ion-card-content>
+
+
+        <ion-card-content>
+                <ion-card-title class="detail-header">
+                        <ion-icon class="edit-icon" ios="ios-people" md="md-people"></ion-icon>Family Details
+                         
+                </ion-card-title>
+                
+                <ion-row><ion-col>Family Values</ion-col><ion-col>:  Moderate</ion-col></ion-row>
+                <ion-row><ion-col>Family Type</ion-col><ion-col>: Joint family</ion-col></ion-row>
+                <ion-row><ion-col>Family Status</ion-col><ion-col>:  Upper Middle class</ion-col></ion-row>
+                <ion-row><ion-col>Father's Occupation</ion-col><ion-col>: Business man</ion-col></ion-row>
+                <ion-row><ion-col>mother's Occupation</ion-col><ion-col>:  Homemaker</ion-col></ion-row>
+                <ion-row><ion-col>Ancestral Origin</ion-col><ion-col>: Send Request</ion-col></ion-row>
+                               
+        </ion-card-content>
+
+        <ion-card-content>
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" ios="ios-people" md="md-people"></ion-icon>About Our Family
+                    
+            </ion-card-title>
+        </ion-card-content>
+
+      </ion-card>
+
+      <ion-card-content>
+            <h5 class="personal-details">PARTNER PREFERENCE</h5>
+
+            <ion-row class="preference"><ion-col><img class="partner" src="assets/imgs/img.png"></ion-col><ion-col class="profile-match">Your Profile matches 16/21 of her preferences</ion-col><ion-col><img class="partner" src="assets/imgs/13.png"></ion-col></ion-row>
+
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" name="document"></ion-icon> Basic Details
+            </ion-card-title>
+ 
+            <ion-row><ion-col>Grooms Age</ion-col><ion-col>: 20 yrs</ion-col></ion-row>
+            <ion-row><ion-col>Height</ion-col><ion-col>: 5 Ft 9 in / 175 Cms</ion-col></ion-row>
+            <ion-row><ion-col>Maritial Status</ion-col><ion-col>: Never Married</ion-col></ion-row>
+            <ion-row><ion-col>Mother Tongue</ion-col><ion-col>: Tamil</ion-col></ion-row>
+            <ion-row><ion-col>Physical Status</ion-col><ion-col>: Normal</ion-col></ion-row>
+            <ion-row><ion-col>Eating Habits</ion-col><ion-col>: Eggetarian</ion-col></ion-row>
+            <ion-row><ion-col>Drinking Habits</ion-col><ion-col>: Never Drinks</ion-col></ion-row>
+            <ion-row><ion-col>Smoking Habits</ion-col><ion-col>: Never Smokes</ion-col></ion-row>
+    </ion-card-content>
+
+    <ion-card-content>
+
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" name="document"></ion-icon> Religious Information
+            </ion-card-title>
+            
+            <ion-row><ion-col>Religion</ion-col><ion-col>: Hindu</ion-col></ion-row>
+            <ion-row><ion-col>Caste</ion-col><ion-col>: Some</ion-col></ion-row>
+            <ion-row><ion-col>Sub Caste</ion-col><ion-col>: Any</ion-col></ion-row>
+            <ion-row><ion-col>Gothram</ion-col><ion-col>:  Any</ion-col></ion-row>
+            <ion-row><ion-col>Star</ion-col><ion-col>: Any </ion-col></ion-row>
+            <ion-row><ion-col>Raasi</ion-col><ion-col>: Any</ion-col></ion-row>
+    </ion-card-content>
+
+
+    <ion-card-content>
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" name="document"></ion-icon> Professional Information
+            </ion-card-title>
+            
+            <ion-row><ion-col>Educational </ion-col><ion-col>:  Any</ion-col></ion-row>
+            <ion-row><ion-col>Occupation</ion-col><ion-col>:  Any</ion-col></ion-row>
+            <ion-row><ion-col>Emplyed In </ion-col><ion-col>:  Any</ion-col></ion-row>
+    </ion-card-content>
+
+
+    <ion-card-content>
+            <ion-card-title class="detail-header">
+                    <ion-icon class="edit-icon" ios="ios-school" md="md-school"></ion-icon>Location
+                     
+            </ion-card-title>
+            
+            <ion-row><ion-col>Country</ion-col><ion-col>:  India</ion-col></ion-row>
+            <ion-row><ion-col>Residing State</ion-col><ion-col>: Uttra Pradesh</ion-col></ion-row>
+            <ion-row><ion-col>Residing City</ion-col><ion-col>: Azagrah</ion-col></ion-row>
+            <ion-row><ion-col>Citizenship</ion-col><ion-col>:  Any</ion-col></ion-row>
+           
+    </ion-card-content>
+
+
+
+
+
+
+
+    <div class="w3-container">
+            
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-animate-top w3-card-4">
+            <header class="w3-container w3-teal"> 
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              <div class="popup-img">
+                <img class="partner" src="assets/imgs/13.png" style="margin-top: 20px;">
+                <p> Kavya</p>
+              </div>
+            </header>
+            <div class="w3-container">
+               <div class="popup-contact">
+                <p>Contact kavya on</p>
+                <p><ion-icon class="popup-icon" ios="ios-call" md="md-call"></ion-icon> +91 9510XXXXXX</p>
+                <button (click)="gotomember()" ion-button color="secondary" clear>UPGRADE NOW</button>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="id02" class="w3-modal">
+                <div class="w3-modal-content w3-animate-top w3-card-4">
+                  <header class="w3-container w3-teal"> 
+                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div class="popup-img">
+                      <img class="partner" src="assets/imgs/13.png" style="margin-top: 20px;">
+                      <p> Kavya</p>
+                    </div>
+                  </header>
+                  <div class="w3-container">
+                     <div class="popup-contact">
+                      <p>Chat kavya on</p>
+                      <p>Comming Soon</p>
+                     </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+
+</ion-content>

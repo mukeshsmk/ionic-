@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+
+  <!-- <form (ngSubmit)="save()" [formGroup]="authFormone">   -->
+  <ion-list>
+    <h4 class="top-title">LOCATION</h4>
+
+       <ion-item>
+      <ion-label color="primary" floating>STREET</ion-label>
+      <ion-input type="text" [(ngModel)]="authForm.Street" okText="Done" cancelText="Cancel"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>CITY</ion-label>
+      <ion-select [(ngModel)]="authForm.City" okText="Done" cancelText="Cancel">
+        <ion-option>Chennai</ion-option>
+        <ion-option>Coimbatore</ion-option>
+        <ion-option>Madurai</ion-option>
+        <ion-option>Trichy</ion-option>
+        <ion-option>Thirunelveli</ion-option>
+        <ion-option>Bangalore</ion-option>
+        <ion-option>Mumbai</ion-option>
+        <ion-option>Goa</ion-option>
+        <ion-option>Delhi</ion-option>
+        <ion-option>kolkata</ion-option>
+        <ion-option>Selam</ion-option>
+        <ion-option>Agra</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>STATE</ion-label>
+      <ion-select [(ngModel)]="authForm.State" okText="Done" cancelText="Cancel">
+        <ion-option>Tamilnadu</ion-option>
+        <ion-option>Karnatak</ion-option>
+        <ion-option>Mumbai</ion-option>
+        <ion-option>Kolkata</ion-option>
+        <ion-option>Delhi</ion-option>
+        <ion-option>Kerala</ion-option>
+        <ion-option>Andra</ion-option>
+        <ion-option>Pune</ion-option>
+
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="primary" floating>PIN</ion-label>
+      <ion-input type="number" [(ngModel)]="authForm.PIN" okText="Done" cancelText="Cancel"></ion-input>
+    </ion-item>
+
+    <button type="submit" (click)="save()" ion-button round>SAVE</button>
+
+  </ion-list>
+  <!-- </form> -->
+</ion-content>

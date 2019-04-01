@@ -1,0 +1,74 @@
+page-inbox {
+    .inbox-title{
+            margin-top: 0px !important;
+            text-align:  !important;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+    }
+    .toolbar-title {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    .toolbar-title-md {
+    font-size: 16px !important;
+    }
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: blue !important;
+
+
+    }
+    .SwipedTabs-tabs ion-segment-button
+    {
+        border:none !important;
+        color:#1e1e1e !important;
+        background-color:white!important;
+
+    }
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:#780000 !important
+    }
+    .SwipedTabs-tabs
+    {
+        width: fit-content !important;
+       
+    }
+    .segment-md .segment-button{
+        transition: 100ms all linear;
+        padding: 0 6px;
+        width: 106px !important;
+        font-size: 10px !important;
+    }
+    .premium-members{
+        width: 100%;
+        float: left;
+        padding: 0 12%;
+        text-align: center;
+        // margin: 35% 0 !important;
+    }
+    .important-img{
+        height:60px;
+    }
+    .swiper-slide {
+        height: 80% !important;
+    }
+    .premium-members p{
+        font-size: 16px;
+        color: #828282;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+}

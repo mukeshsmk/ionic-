@@ -1,0 +1,251 @@
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+    .header-icon{
+        color:#ffffff !important;
+    }
+    #ion-diagnostics-toast .ion-diagnostics-toast-message{
+        padding:0px !important;
+    }
+    .scroll-content{
+        overflow-x: auto !important;
+    }
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+    }
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: blue !important;
+}
+    .segment-md .segment-button ion-icon {
+        font-size: 22px;
+        line-height: 0rem;
+    }
+    .page-home .segment-md .segment-button{
+        color:#eae6e6 !important;
+    }
+    .SwipedTabs-tabs ion-segment-button
+    {
+        border:none !important;
+        color:#1e1e1e !important;
+        background-color:white!important;
+
+    }
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:#780000 !important;
+    }
+    .SwipedTabs-tabs
+    {
+        width: fit-content !important;
+        border-bottom: none  !important;
+    }
+    .SwipedTabs-indicatorSegment {
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all;
+        -webkit-transform-origin: top 0 left 0;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: none !important;
+        left: 0px;
+        width: 0px!important;
+        transform: translate3d(0%, 0px, 0px);
+    }
+    .segment-md .segment-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 0;
+        height: 36px !important;
+        border-bottom-width: none;
+        border-bottom-style: none;
+        border-bottom-color: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #488aff;
+        background-color: transparent;
+        opacity: 0.7;
+        -webkit-transition: 100ms all linear;
+        transition: 100ms all linear;
+        padding: 0 6px;
+        width: 108px !important;
+        font-size: 10px !important;
+    }
+    page-home .SwipedTabs-indicatorSegment {
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all;
+        -webkit-transform-origin: top 0 left 0;
+        transform-origin: top 0 left 0;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color: blue !important;
+        left: 0px;
+        width: 0px !important;
+        -webkit-transform: translate3d(0%, 0px, 0px);
+        transform: translate3d(0%, 0px, 0px);
+    }
+    page-home { .swiper-slide {
+        height: 20% !important;
+    }
+    .slide-zoom {
+        text-align: left;
+        display: block;
+        width: 100%;
+        margin: auto;
+        
+    }
+    .swiper-container {
+        display: flex;
+        overflow: inherit !important;
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        width: 100%;
+        padding: 5px 10px 0 10px;
+        float: left;
+        border-bottom: 4px solid #f1f1f1;
+    }
+    .card-1-img{
+        margin: 10px 5px;
+        width: 100%;
+        height: 100px;
+    }
+    .card-1{
+        width:30%;
+        float:left;
+    }
+    .card-2{
+        width: 65%;
+        float: left;
+        padding: 2% 0 0 5%;
+    }
+    .card-md {
+        padding: 5px 10px 0 10px;
+        margin: 0px !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        // border-bottom: 4px solid #f1f1f1;
+    }
+    .card-md p {
+        margin: 0 0 0px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #060505;
+        font-weight: 400;
+    }
+    .card-md h2 {
+        margin: 0px 0;
+        font-size: 20px;
+        color: #101010;
+        font-weight: 500;
+    }
+    .icon-1{
+        width:50%;
+        float:left;
+        text-align: center;
+    }
+    .icon-star {
+        display: inline-block;
+        font-size: 22px;
+        border: 1px solid #eaeaea;
+        color: #ff9700;
+        padding: 3px 13px;
+        border-radius: 61px;
+    }
+    .icon-chat{
+        display: inline-block;
+        font-size: 22px;
+        border: 1px solid #eaeaea;
+        color: #a09d9d;
+        padding: 4px 13px 0 13px;
+        border-radius: 61px;
+    }
+    .like-her{
+        width:50%;
+        float:left;
+        text-align: center;
+    }
+    .like-her p{
+        font-size: 16px;
+        font-weight: 500;
+        margin-top:6px;
+    }
+    .icon-2{
+        width:100%;
+        float:left;
+        margin-top: 10%;
+    }
+    .icon-cancel{
+        width:25%;
+        float:left;
+    }
+    .icon-okey{
+        width:25%;
+        float:left;
+    }
+    .icon-close{
+        border: 1px solid #c7c4c4;
+        color: #a09d9d;
+        font-size: 25px;
+        padding: 3px 8px;
+        border-radius: 60px;
+    }
+    .icon-ok{
+        border: 1px solid #ff9c0e;
+        color: #ffffff;
+        background: #ff9c0e;
+        font-size: 25px;
+        padding: 3px 6px;
+        border-radius: 60px;
+    }
+
+    .premium-members{
+        width: 100%;
+        float: left;
+        padding: 0 12%;
+        text-align: center;
+        margin: 40% 0;
+    }
+    .important-img{
+        height:60px;
+    }
+    .premium-members p{
+        font-size: 16px;
+        color: #828282;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+    .premium-members h5{
+        color: #970000;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}

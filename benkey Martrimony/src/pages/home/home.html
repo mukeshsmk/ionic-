@@ -1,0 +1,388 @@
+<ion-header>
+
+  <ion-navbar>
+    
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-segment [(ngModel)]="page" color="dark">
+          <ion-segment-button value="Home">
+              <ion-icon class="header-icon" name="home"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="Notifications" (click)="gotonotification()">
+              <ion-icon class="header-icon" name="notifications-outline"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="Mail" (click)="gotoinbox()">
+              <ion-icon class="header-icon" name="mail"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="Search" (click)="gotosearch()">
+             <ion-icon class="header-icon" name="search"></ion-icon>
+          </ion-segment-button>
+      </ion-segment>
+  </ion-navbar>
+<ion-content  #scroll scrollX="true" style="height: 42px;">
+  <ion-segment  class="SwipedTabs-tabs"  >
+    <ion-segment-button *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
+    [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'  [ngStyle]="{'width.px': (this.tabElementWidth_px)}" >
+      {{tab}}
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- here is our dynamic line  "indicator"-->
+  <div id='indicator' class="SwipedTabs-indicatorSegment" [ngStyle]="{'width.px': (this.tabElementWidth_px)}" ></div>
+</ion-content>
+</ion-header>
+
+<ion-content >
+
+
+  <ion-slides #SwipedTabsSlider  (ionSlideDrag)="animateIndicator($event)"
+              (ionSlideWillChange)="updateIndicatorPosition()"
+              (ionSlideDidChange)="updateIndicatorPosition()"
+              (pan)="updateIndicatorPosition()"
+              [pager]="false"
+        >
+   <ion-slide #scroll  scrollY="true">
+      <ion-card>
+        <div class="card" (click)="gotoprofiledetails()" *ngFor="let s of news">
+          <div class="card-1">
+            <img class="card-1-img" src="{{s.urlToImage}}">
+           <div class="icon-1">
+              <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+              <p>Shortlist</p>
+           </div>
+           <div class="icon-1">
+              <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+              <p>1w ago</p>
+            </div> 
+          </div>
+          <div class="card-2">
+            <p>H12345678</p>
+            <h2>{{s.author}}</h2>
+            <p>20 yrs, 5.5ft / 165 cm </p>
+            <p>B.Sc IT/Computer Science , Hindu</p>
+            <p>Cast ,Hasta </p>
+            <p>Lucknow, Uttar pradhesh, india</p>  
+             <div class="icon-2">
+              <div class="like-her">
+                  <p>Like Him?</p>
+                </div>
+                <div class="icon-cancel">
+                    <ion-icon class="icon-close" name="close"></ion-icon>
+                </div>
+                <div class="icon-okey">
+                    <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                </div>
+           </div> 
+          </div>
+        </div>
+       
+      </ion-card>
+      <ion-card>
+          <div class="card" (click)="gotoprofiledetails()">
+            <div class="card-1">
+              <img class="card-1-img" src="assets/imgs/2.png">
+             <div class="icon-1">
+                <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                <p>Shortlist</p>
+             </div>
+             <div class="icon-1">
+                <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                <p>1w ago</p>
+              </div> 
+            </div>
+            <div class="card-2">
+              <p>H12345678</p>
+              <h2>Rakesh</h2>
+              <p>20 yrs, 5.5ft / 165 cm </p>
+              <p>B.Sc IT/Computer Science , Hindu</p>
+              <p>Cast ,Hasta </p>
+              <p>Lucknow, Uttar pradhesh, india</p>  
+               <div class="icon-2">
+                <div class="like-her">
+                    <p>Like Him?</p>
+                  </div>
+                  <div class="icon-cancel">
+                      <ion-icon class="icon-close" name="close"></ion-icon>
+                  </div>
+                  <div class="icon-okey">
+                      <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                  </div>
+             </div> 
+            </div>
+          </div>
+         
+        </ion-card>
+        <ion-card>
+            <div class="card" (click)="gotoprofiledetails()">
+              <div class="card-1">
+                <img class="card-1-img" src="assets/imgs/3.png">
+               <div class="icon-1">
+                  <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                  <p>Shortlist</p>
+               </div>
+               <div class="icon-1">
+                  <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                  <p>1w ago</p>
+                </div> 
+              </div>
+              <div class="card-2">
+                <p>H12345678</p>
+                <h2>Rakesh</h2>
+                <p>20 yrs, 5.5ft / 165 cm </p>
+                <p>B.Sc IT/Computer Science , Hindu</p>
+                <p>Cast ,Hasta </p>
+                <p>Lucknow, Uttar pradhesh, india</p>  
+                 <div class="icon-2">
+                  <div class="like-her">
+                      <p>Like Him?</p>
+                    </div>
+                    <div class="icon-cancel">
+                        <ion-icon class="icon-close" name="close"></ion-icon>
+                    </div>
+                    <div class="icon-okey">
+                        <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                    </div>
+               </div> 
+              </div>
+            </div>
+           
+          </ion-card>
+         
+            
+              
+    </ion-slide>
+    
+
+    <ion-slide>
+      <div class="premium-members">
+        <img class="important-img" src="assets/imgs/danger.png">
+        <p>No profiles available that match your criteria.</p>
+        <p>Try to refine your search</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="premium-members">
+          <img class="important-img" src="assets/imgs/danger.png">
+          <p>You have not shortlisted any profiles.</p>
+          <h5 (click)="gotofirst()">Go to matching profiles</h5>
+        </div>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <div class="card" (click)="gotoprofiledetails()">
+          <div class="card-1">
+            <img class="card-1-img" src="assets/imgs/1.png">
+           <div class="icon-1">
+              <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+              <p>Shortlist</p>
+           </div>
+           <div class="icon-1">
+              <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+              <p>1w ago</p>
+            </div> 
+          </div>
+          <div class="card-2">
+            <p>H12345678</p>
+            <h2>Rakesh</h2>
+            <p>20 yrs, 5.5ft / 165 cm </p>
+            <p>B.Sc IT/Computer Science , Hindu</p>
+            <p>Cast ,Hasta </p>
+            <p>Lucknow, Uttar pradhesh, india</p>  
+             <div class="icon-2">
+              <div class="like-her">
+                  <p>Like Him?</p>
+                </div>
+                <div class="icon-cancel">
+                    <ion-icon class="icon-close" name="close"></ion-icon>
+                </div>
+                <div class="icon-okey">
+                    <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                </div>
+           </div> 
+          </div>
+        </div>
+       
+      </ion-card>
+      <ion-card>
+          <div class="card" (click)="gotoprofiledetails()">
+            <div class="card-1">
+              <img class="card-1-img" src="assets/imgs/2.png">
+             <div class="icon-1">
+                <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                <p>Shortlist</p>
+             </div>
+             <div class="icon-1">
+                <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                <p>1w ago</p>
+              </div> 
+            </div>
+            <div class="card-2">
+              <p>H12345678</p>
+              <h2>Rakesh</h2>
+              <p>20 yrs, 5.5ft / 165 cm </p>
+              <p>B.Sc IT/Computer Science , Hindu</p>
+              <p>Cast ,Hasta </p>
+              <p>Lucknow, Uttar pradhesh, india</p>  
+               <div class="icon-2">
+                <div class="like-her">
+                    <p>Like Him?</p>
+                  </div>
+                  <div class="icon-cancel">
+                      <ion-icon class="icon-close" name="close"></ion-icon>
+                  </div>
+                  <div class="icon-okey">
+                      <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                  </div>
+             </div> 
+            </div>
+          </div>
+         
+        </ion-card>
+        <ion-card>
+            <div class="card" (click)="gotoprofiledetails()">
+              <div class="card-1">
+                <img class="card-1-img" src="assets/imgs/3.png">
+               <div class="icon-1">
+                  <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                  <p>Shortlist</p>
+               </div>
+               <div class="icon-1">
+                  <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                  <p>1w ago</p>
+                </div> 
+              </div>
+              <div class="card-2">
+                <p>H12345678</p>
+                <h2>Rakesh</h2>
+                <p>20 yrs, 5.5ft / 165 cm </p>
+                <p>B.Sc IT/Computer Science , Hindu</p>
+                <p>Cast ,Hasta </p>
+                <p>Lucknow, Uttar pradhesh, india</p>  
+                 <div class="icon-2">
+                  <div class="like-her">
+                      <p>Like Him?</p>
+                    </div>
+                    <div class="icon-cancel">
+                        <ion-icon class="icon-close" name="close"></ion-icon>
+                    </div>
+                    <div class="icon-okey">
+                        <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                    </div>
+               </div> 
+              </div>
+            </div>
+           
+          </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <div class="card" (click)="gotoprofiledetails()" *ngFor="let d of detail">
+          <div class="card-1">
+            <img class="card-1-img" src="assets/imgs/1.png">
+           <div class="icon-1">
+              <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+              <p>Shortlist</p>
+           </div>
+           <div class="icon-1">
+              <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+              <p>1w ago</p>
+            </div> 
+          </div>
+          <div class="card-2">
+            <p>{{d._id}}</p>
+            <h2>{{d.name}}</h2>
+            <p>{{d.age}} yrs, {{d.height}}ft / 165 cm </p>
+            <p>{{d.qualification}}</p>
+            <p>{{d.cast}} ,Hasta </p>
+            <p>{{d.address}}</p>  
+             <div class="icon-2">
+              <div class="like-her">
+                  <p>Like Him?</p>
+                </div>
+                <div class="icon-cancel">
+                    <ion-icon class="icon-close" name="close"></ion-icon>
+                </div>
+                <div class="icon-okey">
+                    <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                </div>
+           </div> 
+          </div>
+        </div>
+       
+      </ion-card>
+      <!-- <ion-card>
+          <div class="card" (click)="gotoprofiledetails()">
+            <div class="card-1">
+              <img class="card-1-img" src="assets/imgs/2.png">
+             <div class="icon-1">
+                <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                <p>Shortlist</p>
+             </div>
+             <div class="icon-1">
+                <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                <p>1w ago</p>
+              </div> 
+            </div>
+            <div class="card-2">
+              <p>H12345678</p>
+              <h2>Rakesh</h2>
+              <p>20 yrs, 5.5ft / 165 cm </p>
+              <p>B.Sc IT/Computer Science , Hindu</p>
+              <p>Cast ,Hasta </p>
+              <p>Lucknow, Uttar pradhesh, india</p>  
+               <div class="icon-2">
+                <div class="like-her">
+                    <p>Like Him?</p>
+                  </div>
+                  <div class="icon-cancel">
+                      <ion-icon class="icon-close" name="close"></ion-icon>
+                  </div>
+                  <div class="icon-okey">
+                      <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                  </div>
+             </div> 
+            </div>
+          </div>
+         
+        </ion-card>
+        <ion-card>
+            <div class="card" (click)="gotoprofiledetails()">
+              <div class="card-1">
+                <img class="card-1-img" src="assets/imgs/3.png">
+               <div class="icon-1">
+                  <ion-icon class="icon-star" ios="ios-star-outline" md="md-star-outline"></ion-icon>
+                  <p>Shortlist</p>
+               </div>
+               <div class="icon-1">
+                  <ion-icon class="icon-chat" name="chatboxes"></ion-icon>
+                  <p>1w ago</p>
+                </div> 
+              </div>
+              <div class="card-2">
+                <p>H12345678</p>
+                <h2>Rakesh</h2>
+                <p>20 yrs, 5.5ft / 165 cm </p>
+                <p>B.Sc IT/Computer Science , Hindu</p>
+                <p>Cast ,Hasta </p>
+                <p>Lucknow, Uttar pradhesh, india</p>  
+                 <div class="icon-2">
+                  <div class="like-her">
+                      <p>Like Him?</p>
+                    </div>
+                    <div class="icon-cancel">
+                        <ion-icon class="icon-close" name="close"></ion-icon>
+                    </div>
+                    <div class="icon-okey">
+                        <ion-icon class="icon-ok" name="checkmark"></ion-icon>
+                    </div>
+               </div> 
+              </div>
+            </div>
+           
+          </ion-card> -->
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

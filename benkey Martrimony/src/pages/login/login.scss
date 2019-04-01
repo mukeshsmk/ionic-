@@ -1,0 +1,95 @@
+page-login {
+    .toolbar-title {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+    .login-title{
+        margin-top: 18px !important;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .item-md {
+        padding-left: 0px;
+    }
+    .input-wrapper {
+        margin-left: 0% !important;
+    }
+    .label-md-primary, .item-input .label-md-primary, .item-select .label-md-primary, .item-datetime .label-md-primary {
+        color: #999999 !important;
+        font-size: 12px !important;
+    }
+    .label-md[stacked], .label-md[floating] {
+        margin-left: 0;
+        margin-bottom: 0;
+        font-size: 12px!important;
+    }
+    .login-button {
+        border-radius: 64px;
+        padding: 0% 23%;
+        margin: 10% 20% 0 20%;
+        background: -webkit-gradient(linear, left top, right top, from(#d30000), to(#350000));
+        background: linear-gradient(to right, #d30000, #350000);
+        font-size: 16px;
+    }
+    .col{
+        text-align: center;
+        color: #a00000;
+        font-size: 14px;
+        height: 20px;
+    }
+    .member-button{
+        padding: 7% 4%;
+        margin: 10% 20%;
+        border: 1px solid #acacac;
+        color: #acacac;
+        font-size: 13px;
+        text-transform: none;
+    }
+    .reg{
+        color: #ae0000;
+        margin: 0 10px;
+    }
+    .input-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        border-bottom: 1px solid #999999;
+    }
+    .item-cover {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        cursor: pointer;
+        border-bottom: 1px solid #999999;
+    }
+    .button-md {
+        border-radius: 64px;
+        overflow: hidden;
+        height: 2.8rem;
+        font-size: 16px;
+        
+    }
+    .login{
+        font-size: 13px;
+        margin: 10px 0;
+        text-align: center;
+
+    }
+    .login-span{
+        color: #5c0000;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

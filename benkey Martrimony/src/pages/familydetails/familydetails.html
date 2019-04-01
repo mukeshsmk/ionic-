@@ -1,0 +1,106 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+       
+    <ion-list>
+    <h4 class="top-title">FAMILY DETAILS</h4>
+
+        <ion-item>
+            <ion-label color="primary" floating>FAMILY VALUE</ion-label>
+            <ion-select [(ngModel)]="authForm.Family_Values" okText="Done" cancelText="Cancel">
+              <ion-option>Orthodox</ion-option>
+              <ion-option>Traditional</ion-option>
+              <ion-option>Moderate</ion-option>
+              <ion-option>Liberal</ion-option>
+            </ion-select>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label color="primary" floating>FAMILY TYPE</ion-label>
+            <ion-select [(ngModel)]="authForm.Family_Type" okText="Done" cancelText="Cancel">
+              <ion-option>Joint family</ion-option>
+              <ion-option>Nuclear Family</ion-option>
+              <ion-option>Others</ion-option>
+            </ion-select>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label color="primary" floating>FAMILY STATUS</ion-label>
+            <ion-select [(ngModel)]="authForm.Family_Status" okText="Done" cancelText="Cancel">
+              <ion-option>Middle class</ion-option>
+              <ion-option>Upper-middle class</ion-option>
+              <ion-option>High class</ion-option>
+              <ion-option>Rich / Affluent</ion-option>
+              
+            </ion-select>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label color="primary" floating>FATHER'S OCCUPATION</ion-label>
+            <ion-select [(ngModel)]="authForm.Father_s_Occupation" okText="Done" cancelText="Cancel">
+              <ion-option>Employed</ion-option>
+              <ion-option>Business man</ion-option>
+              <ion-option>Professional</ion-option>
+              <ion-option>Retired</ion-option>
+              <ion-option>Not Employed</ion-option>
+              <ion-option>Passwed Away</ion-option>
+            </ion-select>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label color="primary" floating>MOTHER'S OCCUPATION</ion-label>
+            <ion-select [(ngModel)]="authForm.Mother_s_Occupation" okText="Done" cancelText="Cancel">
+              <ion-option>Homemaker</ion-option>
+              <ion-option>Employed</ion-option>
+              <ion-option>Business woman</ion-option>
+              <ion-option>Professional</ion-option>
+              <ion-option>Retired</ion-option>
+              <ion-option>Passwed Away</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary" floating>NO OF BROTHER'S</ion-label>
+            <ion-select [(ngModel)]="authForm.Num_of_Brothers" okText="Done" cancelText="Cancel">
+              <ion-option>0</ion-option>
+              <ion-option>1</ion-option>
+              <ion-option>2</ion-option>
+              <ion-option>3</ion-option>
+              <ion-option>4</ion-option>
+              <ion-option>5</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary" floating>NO OF SISTER'S</ion-label>
+            <ion-select [(ngModel)]="authForm.Num_of_Sisters" okText="Done" cancelText="Cancel">
+              <ion-option>0</ion-option>
+              <ion-option>1</ion-option>
+              <ion-option>2</ion-option>
+              <ion-option>3</ion-option>
+              <ion-option>4</ion-option>
+              <ion-option>5</ion-option>
+            </ion-select>
+          </ion-item>
+
+
+          <button (click)="save()" ion-button round>SAVE</button>
+
+      </ion-list>
+
+  </ion-content>
+

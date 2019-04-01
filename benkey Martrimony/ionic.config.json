@@ -1,0 +1,7 @@
+{
+  "name": "matriapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

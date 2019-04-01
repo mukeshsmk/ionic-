@@ -1,0 +1,140 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+    
+    <ion-list>
+    <h4 class="top-title">RELIGIOUS INFORMATION</h4>
+    <ion-item>
+        <ion-label color="primary" floating>Religion</ion-label>
+        <ion-select [(ngModel)]="authForm.PARTNER_Religion" okText="Done" cancelText="Cancel">
+            <ion-option>Hindu</ion-option>
+            <ion-option>Muslim</ion-option>
+            <ion-option>Cristian</ion-option>
+            <ion-option>Sikh</ion-option>
+            <ion-option>Jain</ion-option>
+            <ion-option>Parsi</ion-option>
+            <ion-option>Buddhist</ion-option>
+            <ion-option>Jewish</ion-option>
+            <ion-option>Inter-Religion</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary" floating>CASTE</ion-label>
+          <ion-select [(ngModel)]="authForm.PARTNER_Caste" okText="Done" cancelText="Cancel">
+              <ion-option>Adi Dravider</ion-option>
+              <ion-option>Boyer</ion-option>
+              <ion-option>Brahmin</ion-option>
+              <ion-option>Chettiar</ion-option>
+              <ion-option>Gounder</ion-option>
+              <ion-option>Inter Caste</ion-option>
+              <ion-option>Karuneergar</ion-option>
+              <ion-option>Kongu vellalar Gounder</ion-option>
+              <ion-option>Mudaliyar</ion-option>
+              <ion-option>Nadar</ion-option>
+              <ion-option>Naidu</ion-option>
+              <ion-option>Pillai</ion-option>
+              <ion-option>Reddy</ion-option>
+              <ion-option>Sc</ion-option>
+              <ion-option>Vellalar</ion-option>
+              <ion-option>Yadav</ion-option>
+          </ion-select>
+        </ion-item>
+
+      <!-- <ion-item>
+        <ion-label color="primary" floating>SUB CASTE</ion-label>
+        <ion-select [(ngModel)]="authForm.Sub_Caste" okText="Done" cancelText="Cancel">
+          <ion-option>xxxx</ion-option>
+          <ion-option>xxxx</ion-option>
+          <ion-option>xxx</ion-option>
+          <ion-option>xxxxx</ion-option>
+          <ion-option>xxxx</ion-option>
+          <ion-option>xx</ion-option>
+        </ion-select>
+      </ion-item> -->
+    
+
+    <ion-item>
+        <ion-label color="primary" floating>ENTER YOUR GOTHRA</ion-label>
+        <ion-input  [(ngModel)]="authForm.PARTNER_Gothram" type="text"></ion-input>
+    </ion-item>
+  
+
+    <ion-item>
+        <ion-label color="primary" floating>STAR</ion-label>
+        <ion-select [(ngModel)]="authForm.PARTNER_Star" okText="Done" cancelText="Cancel">
+          <ion-option>Ashvini</ion-option>
+          <ion-option>Bharani</ion-option>
+          <ion-option>Krittika</ion-option>
+          <ion-option>Rohini</ion-option>
+          <ion-option>Mrigashīrsha</ion-option>
+          <ion-option>Ardra</ion-option>
+          <ion-option>Punarvasu</ion-option>
+          <ion-option>Pushya</ion-option>
+          <ion-option>Āshleshā</ion-option>
+          <ion-option>Maghā</ion-option>
+          <ion-option>Pūrva Phalgunī</ion-option>
+          <ion-option>Hasta</ion-option>
+          <ion-option>Chitra</ion-option>
+          <ion-option>Swāti</ion-option>
+          <ion-option>Sravana</ion-option>
+          <ion-option>Abhijit</ion-option>
+          <ion-option>Dhanishta </ion-option>
+          <ion-option>Shatabhisha</ion-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>RAASI / MOON SIGN</ion-label>
+        <ion-select [(ngModel)]="authForm.PARTNER_Raasi" okText="Done" cancelText="Cancel">
+          <ion-option>Mesham</ion-option>
+          <ion-option>Makara</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+    <!-- <ion-item>
+        <ion-label color="primary" floating>ZODIC / STAR SIGN</ion-label>
+        <ion-select [(ngModel)]="authForm.Star" okText="Done" cancelText="Cancel">
+          <ion-option>Aries</ion-option>
+          <ion-option>Taurus</ion-option>
+          <ion-option>Gemini</ion-option>
+          <ion-option>Cancer</ion-option>
+          <ion-option>Leo</ion-option>
+          <ion-option>Virgo</ion-option>
+          <ion-option>Libra</ion-option>
+          <ion-option>corpio</ion-option>
+          <ion-option>Sagitarius</ion-option>
+          <ion-option>Capricorn</ion-option>
+          <ion-option>Aquarius</ion-option>
+          <ion-option>Pisces</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>HAVING / DOSHAM</ion-label>
+        <ion-select [(ngModel)]="authForm.Dosham" okText="Done" cancelText="Cancel">
+          <ion-option>Yes</ion-option>
+          <ion-option>No</ion-option>
+          <ion-option>Don't know</ion-option>
+        </ion-select>
+      </ion-item> -->
+
+      <button (click)="save()" ion-button round>SAVE</button>
+
+  </ion-list>
+
+</ion-content>
+
+

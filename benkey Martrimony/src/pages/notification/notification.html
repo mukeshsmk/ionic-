@@ -1,0 +1,176 @@
+<ion-header>
+
+    <ion-navbar>
+      
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-segment [(ngModel)]="page" color="dark">
+            <ion-segment-button value="Home" (click)="gotohome()">
+                <ion-icon class="header-icon" name="home"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="Notifications">
+                <ion-icon class="header-icon" name="notifications-outline"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="Mail" (click)="gotoinbox()">
+                <ion-icon class="header-icon" name="mail"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="Search" (click)="gotosearch()">
+               <ion-icon class="header-icon" name="search"></ion-icon>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content >
+    
+    <ion-card>
+        <div class="notification" (click)="gotoprofiledetails()">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/11.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" ios="ios-eye" md="md-eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1m</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification" (click)="gotoprofiledetails()">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/12.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1w</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification" (click)="gotoprofiledetails()">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/13.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1hr</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+  
+    <ion-card>
+        <div class="notification" (click)="gotoprofiledetails()">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/11.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" ios="ios-eye" md="md-eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1m</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification" (click)="gotoprofiledetails()">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/12.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1d</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/13.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>16d</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+  
+    <ion-card>
+        <div class="notification">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/11.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" ios="ios-eye" md="md-eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1s</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/12.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>19m</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+    <ion-card>
+        <div class="notification">
+            <div class="notification-img">
+                <img class="viewer-img" src="assets/imgs/13.png">
+            </div>
+            <div class="notification-content">
+                <p class="viewed">watson viewed your <br>profile...</p>
+                <ion-icon class="eye-icon" name="eye"></ion-icon>
+            </div>
+            <div class="notification-profile">
+                <span>1yr</span>
+                <p class="view-profile">VIEW PROFILE</p>
+            </div>
+        </div>
+
+    </ion-card>
+  
+  
+  </ion-content>

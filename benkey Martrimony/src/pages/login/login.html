@@ -1,0 +1,41 @@
+
+<ion-header>
+        <ion-navbar>
+          <!-- <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button> -->
+          <ion-title class="login">LOGIN</ion-title>
+        </ion-navbar>
+</ion-header>
+
+  <ion-content padding>
+  
+   
+    <ion-list>
+    
+        <ion-item>
+            <ion-label color="primary" floating> E-Mail ID / Mobile Number / Benkey ID</ion-label>
+            <ion-input type="text" [(ngModel)]="user.Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.Password"></ion-input>
+        </ion-item>
+      
+        <button ion-button round class="login-button" (click)="login()">LOGIN</button>
+
+
+        
+        <!-- <div class = "row">
+            <div class = "col" style="border-right: 1px solid #aaaaaa; height: 25px;">Login Via OTP</div>
+            <div class = "col">Forgot Password</div>
+        </div> -->
+        <p class="login">Not a member?<span class="login-span" (click)="gotologin()"> Register</span></p>
+        <!-- <button ion-button round outline class="member-button">Not a member? <span class="reg"> Register Free</span></button> -->
+
+      </ion-list>
+      
+     
+  </ion-content>
+  

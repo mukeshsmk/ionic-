@@ -1,0 +1,174 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+  
+    <ion-list>
+
+    <h4 class="top-title">BASIC DETAILS</h4>
+        
+
+            <ion-item>
+                <ion-label color="primary" floating>NAME</ion-label>
+                <ion-input type="text" [(ngModel)]="authForm.Name" value={{user.Name}} required ></ion-input>
+            </ion-item>
+
+              <ion-item>
+                <ion-label color="primary" floating>GENDER </ion-label>
+                <ion-select [(ngModel)]="authForm.Gender" required okText="Done" cancelText="Cancel">
+                  <ion-option value="Male">Male</ion-option>
+                  <ion-option value="Female">Female</ion-option>
+                </ion-select>
+              </ion-item>
+    
+              <!-- <ion-item>
+                  <ion-label color="primary" floating>EMAIL</ion-label>
+                  <ion-input [(ngModel)]="authForm.Email" required type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label color="primary" floating>PASSWORD</ion-label>
+                  <ion-input  [(ngModel)]="authForm.Password" required type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label color="primary" floating>MOBILE</ion-label>
+                  <ion-input  [(ngModel)]="authForm.Mobile" required type="number"></ion-input>
+              </ion-item> -->
+
+              <!-- <ion-item>
+                <ion-label floating>DATE OF BIRTH</ion-label>
+                <ion-datetime [(ngModel)]="authForm.DOB" displayFormat="MM/DD/YYYY" min="1960" max="2000" ></ion-datetime>
+              </ion-item> -->
+
+
+             <ion-item>
+                  <ion-label color="primary" floating>HEIGHT</ion-label>
+                  <ion-select  [(ngModel)]="authForm.Height"  okText="Done" cancelText="Cancel">
+                    <ion-option>5.1</ion-option>
+                    <ion-option>5.2</ion-option>
+                    <ion-option>5.3</ion-option>
+                    <ion-option>5.4</ion-option>
+                    <ion-option>5.5</ion-option>
+                    <ion-option>5.6</ion-option>
+                    <ion-option>5.7</ion-option>
+
+                  </ion-select>
+                </ion-item> 
+      
+               <ion-item>
+                  <ion-label color="primary" floating>WEIGHT</ion-label>
+                  <ion-select  [(ngModel)]="authForm.Weight"  okText="Done" cancelText="Cancel">
+                    <ion-option>40</ion-option>
+                    <ion-option>45</ion-option>
+                    <ion-option>50</ion-option>
+                    <ion-option>55</ion-option>
+                    <ion-option>60</ion-option>
+                    <ion-option>65</ion-option>
+                    <ion-option>70</ion-option>
+                    <ion-option>75</ion-option>
+                    <ion-option>80</ion-option>
+                    <ion-option>85</ion-option>
+                  </ion-select>
+                </ion-item>
+       
+                <ion-item>
+                    <ion-label color="primary" floating>MARITIAL STATUS</ion-label>
+                    <ion-select  [(ngModel)]="authForm.Marrial_Status"  okText="Done" cancelText="Cancel">
+                      <ion-option>Never Married</ion-option>
+                      <ion-option>Widower</ion-option>
+                      <ion-option>Divorced</ion-option>
+                      <ion-option>Awaiting Divorce</ion-option>
+                    </ion-select>
+                </ion-item>
+
+
+                <ion-item>
+                    <ion-label color="primary" floating>MOTHER TONGUE</ion-label>
+                    <ion-select  [(ngModel)]="authForm.Language"  okText="Done" cancelText="Cancel">
+                      <ion-option>Tamil</ion-option>
+                      <ion-option>Telugu</ion-option>
+                      <ion-option>Malayalam</ion-option>
+                      <ion-option>Hindi</ion-option>
+            
+                    </ion-select>
+                  </ion-item>
+
+
+                  <ion-item>
+                      <ion-label color="primary" floating>PHYSICAL STATUS</ion-label>
+                      <ion-select  [(ngModel)]="authForm.Physical_Status"  okText="Done" cancelText="Cancel">
+                        <ion-option>Normal</ion-option>
+                        <ion-option>Phisically Changed</ion-option>
+                      </ion-select>
+                  </ion-item>
+
+
+                  <ion-item>
+                      <ion-label color="primary" floating>BODY TYPE</ion-label>
+                      <ion-select  [(ngModel)]="authForm.Body_Type"  okText="Done" cancelText="Cancel">
+                        <ion-option>Average</ion-option>
+                        <ion-option>Athletic</ion-option>
+                        <ion-option>Slim</ion-option>
+                        <ion-option>Heavy</ion-option>
+                      </ion-select>
+                  </ion-item>
+
+                <ion-item>
+                  <ion-label color="primary" floating>PROFILE CREATED FOR</ion-label>
+                    <ion-select  [(ngModel)]="authForm.Profile_Created_For"  required okText="Done" cancelText="Cancel">
+                      <ion-option>My self</ion-option>
+                      <ion-option>Son</ion-option>
+                      <ion-option>Daughter</ion-option>
+                      <ion-option>Brother</ion-option>
+                      <ion-option>Sister</ion-option>
+                      <ion-option>Relative</ion-option>
+                      <ion-option>Freind</ion-option>
+                    </ion-select>
+                  </ion-item>
+
+
+                  <ion-item>
+                    <ion-label color="primary" floating>EATING HABITS</ion-label>
+                    <ion-select [(ngModel)]="authForm.Eating_Habits"  okText="Done" cancelText="Cancel">
+                      <ion-option>Vegitarian</ion-option>
+                      <ion-option>Non-Vegiterian</ion-option>
+                      <ion-option>Eggetarian</ion-option>
+                    </ion-select>
+                  </ion-item>
+      
+                <ion-item>
+                  <ion-label color="primary" floating>DRINKING HABITS</ion-label>
+                  <ion-select [(ngModel)]="authForm.Drinking_Habits"  okText="Done" cancelText="Cancel">
+                      <ion-option>No</ion-option>
+                      <ion-option>Yes</ion-option>
+                      <ion-option>Occasionally</ion-option>
+                  </ion-select>
+                </ion-item>
+      
+                <ion-item>
+                  <ion-label color="primary" floating>SMOKING HABITS</ion-label>
+                  <ion-select [(ngModel)]="authForm.Smoking_Habits" okText="Done" cancelText="Cancel">
+                    <ion-option>No</ion-option>
+                    <ion-option>Yes</ion-option>
+                    <ion-option>Occasionally</ion-option>
+                  </ion-select>
+                </ion-item>
+
+        
+
+                <button  type="submit" (click)="save()" ion-button round>SAVE</button>
+      
+                  </ion-list>
+           
+
+  </ion-content>

@@ -1,0 +1,43 @@
+
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title class="inbox-title">CONTACT FILTER</ion-title>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+    
+        <ion-list radio-group>
+            <ion-list-header>
+              Show phone number only to
+            </ion-list-header>
+          
+            <ion-item>
+              <ion-label>All Paid Members</ion-label>
+              <ion-radio checked="true" value="paid"></ion-radio>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>Paid members from my community</ion-label>
+              <ion-radio value="community"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Paid members from whom i contacted/responded to</ion-label>
+                <ion-radio value="contacted"></ion-radio>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Dont show phone number (Hide contact details)</ion-label>
+                <ion-radio value="hidenumber"></ion-radio>
+            </ion-item>
+          
+          </ion-list>
+       
+           
+     
+    </ion-content>
+    

@@ -1,0 +1,218 @@
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title class="login">EDIT PROFILE</ion-title>
+  
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="card-background-page">
+    
+       
+    <ion-list>
+    <h4 class="top-title">BASIC PREFERENCE</h4>
+
+      
+    <ion-item>
+        <ion-label color="primary" floating> AGE FROM</ion-label>
+        <ion-select  [(ngModel)]="authForm.PARTNER_Age_From" okText="Done" cancelText="Cancel">
+          <ion-option>18</ion-option>
+          <ion-option>19</ion-option>
+          <ion-option>20</ion-option>
+          <ion-option>21</ion-option>
+          <ion-option>22</ion-option>
+          <ion-option>23</ion-option>
+          <ion-option>24</ion-option>
+          <ion-option>25</ion-option>
+          <ion-option>26</ion-option>
+          <ion-option>27</ion-option>
+          <ion-option>28</ion-option>
+          <ion-option>29</ion-option>
+          <ion-option>30</ion-option>
+          <ion-option>31</ion-option>
+
+        </ion-select>
+      </ion-item> 
+
+
+          
+    <ion-item>
+      <ion-label color="primary" floating> AGE T0</ion-label>
+      <ion-select  [(ngModel)]="authForm.PARTNER_Age_To" okText="Done" cancelText="Cancel">
+        <ion-option>19</ion-option>
+        <ion-option>20</ion-option>
+        <ion-option>21</ion-option>
+        <ion-option>22</ion-option>
+        <ion-option>23</ion-option>
+        <ion-option>24</ion-option>
+        <ion-option>25</ion-option>
+        <ion-option>26</ion-option>
+        <ion-option>27</ion-option>
+        <ion-option>28</ion-option>
+        <ion-option>29</ion-option>
+        <ion-option>30</ion-option>
+        <ion-option>31</ion-option>
+
+      </ion-select>
+    </ion-item> 
+
+
+    <ion-item>
+      <ion-label color="primary" floating>MARITIAL STATUS</ion-label>
+      <ion-select  [(ngModel)]="authForm.PARTNER_Marrial_Status" okText="Done" cancelText="Cancel">
+        <ion-option>Never Married</ion-option>
+        <ion-option>Widower</ion-option>
+        <ion-option>Divorced</ion-option>
+        <ion-option>Awaiting Divorce</ion-option>
+      </ion-select>
+  </ion-item>
+  
+
+
+     <ion-item>
+        <ion-label color="primary" floating>HEIGHT FROM</ion-label>
+        <ion-select  [(ngModel)]="authForm.PARTNER_Height_From" okText="Done" cancelText="Cancel">
+          <ion-option>5.1</ion-option>
+          <ion-option>5.2</ion-option>
+          <ion-option>5.3</ion-option>
+          <ion-option>5.4</ion-option>
+          <ion-option>5.5</ion-option>
+          <ion-option>5.6</ion-option>
+          <ion-option>5.7</ion-option>
+          <ion-option>5.8</ion-option>
+          <ion-option>5.9</ion-option>
+          <ion-option>6.0</ion-option>
+          <ion-option>6.1</ion-option>
+          <ion-option>6.2</ion-option>
+          <ion-option>6.3</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>HEIGHT TO</ion-label>
+        <ion-select  [(ngModel)]="authForm.PARTNER_Height_To" okText="Done" cancelText="Cancel">
+          <ion-option>5.1</ion-option>
+          <ion-option>5.2</ion-option>
+          <ion-option>5.3</ion-option>
+          <ion-option>5.4</ion-option>
+          <ion-option>5.5</ion-option>
+          <ion-option>5.6</ion-option>
+          <ion-option>5.7</ion-option>
+          <ion-option>5.8</ion-option>
+          <ion-option>5.9</ion-option>
+          <ion-option>6.0</ion-option>
+          <ion-option>6.1</ion-option>
+          <ion-option>6.2</ion-option>
+          <ion-option>6.3</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>WEIGHT FROM</ion-label>
+        <ion-select  [(ngModel)]="authForm.PARTNER_Weight_From" okText="Done" cancelText="Cancel">
+          <ion-option>40</ion-option>
+          <ion-option>45</ion-option>
+          <ion-option>50</ion-option>
+          <ion-option>55</ion-option>
+          <ion-option>60</ion-option>
+          <ion-option>65</ion-option>
+          <ion-option>70</ion-option>
+          <ion-option>75</ion-option>
+          <ion-option>80</ion-option>
+          <ion-option>85</ion-option>
+          <ion-option>90</ion-option>
+          <ion-option>95</ion-option>
+          <ion-option>100+</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label color="primary" floating>WEIGHT TO</ion-label>
+        <ion-select  [(ngModel)]="authForm.PARTNER_Weight_To" okText="Done" cancelText="Cancel">
+          <ion-option>40</ion-option>
+          <ion-option>45</ion-option>
+          <ion-option>50</ion-option>
+          <ion-option>55</ion-option>
+          <ion-option>60</ion-option>
+          <ion-option>65</ion-option>
+          <ion-option>70</ion-option>
+          <ion-option>75</ion-option>
+          <ion-option>80</ion-option>
+          <ion-option>85</ion-option>
+          <ion-option>90</ion-option>
+          <ion-option>95</ion-option>
+          <ion-option>100+</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label color="primary" floating>MOTHER TONGUE</ion-label>
+          <ion-select  [(ngModel)]="authForm.PARTNER_Language" okText="Done" cancelText="Cancel">
+            <ion-option>Tamil</ion-option>
+            <ion-option>Telugu</ion-option>
+            <ion-option>Malayalam</ion-option>
+            <ion-option>Hindi</ion-option>
+  
+          </ion-select>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label color="primary" floating>PHYSICAL STATUS</ion-label>
+            <ion-select  [(ngModel)]="authForm.PARTNER_Physical_Status" okText="Done" cancelText="Cancel">
+              <ion-option>Normal</ion-option>
+              <ion-option>Phisically Changed</ion-option>
+            </ion-select>
+        </ion-item>
+
+
+
+
+        <ion-item>
+          <ion-label color="primary" floating>EATING HABITS</ion-label>
+          <ion-select [(ngModel)]="authForm.PARTNER_Eating_Habits" okText="Done" cancelText="Cancel">
+            <ion-option>Vegitarian</ion-option>
+            <ion-option>Non-Vegiterian</ion-option>
+            <ion-option>Eggetarian</ion-option>
+          </ion-select>
+        </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>DRINKING HABITS</ion-label>
+        <ion-select [(ngModel)]="authForm.PARTNER_Drinking_Habits" okText="Done" cancelText="Cancel">
+            <ion-option>No</ion-option>
+            <ion-option>Yes</ion-option>
+            <ion-option>Occasionally</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" floating>SMOKING HABITS</ion-label>
+        <ion-select [(ngModel)]="authForm.PARTNER_Smoking_Habits" okText="Done" cancelText="Cancel">
+          <ion-option>No</ion-option>
+          <ion-option>Yes</ion-option>
+          <ion-option>Occasionally</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- <ion-item>
+          <ion-label color="primary" floating>ABOUT ME</ion-label>
+          <ion-input [(ngModel)]="authForm.About_Me" required type="text"></ion-input>
+      </ion-item> -->
+         
+
+      <button  type="submit" (click)="save()" ion-button round>SAVE</button>
+      
+
+      </ion-list>
+
+  </ion-content>
+
+
+
+

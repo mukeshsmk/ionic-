@@ -1,0 +1,39 @@
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="inbox-title">FEEDBACK</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+        <p class="feedback-content">How was your experience with our app?</p>
+
+        <textarea class="textarea" placeholder="Write your feedback here" 
+            value="{{ about_me}}"> 
+        </textarea>
+
+        <button ion-button color="secondary" clear>SUBMIT</button>
+       
+  
+        <ion-grid>
+            <p class="grid-p">for any ather help,feel free to contact us</p>
+                <ion-row>
+                  <ion-col col-6 class="call">
+                        <ion-icon class="call-icon" ios="ios-call" md="md-call"></ion-icon><br>
+                        <p class="call-content">Call us</p>
+                        <p class="call-number">+91 XXXXXXXXXX</p>
+                  </ion-col>
+                  <ion-col col-6 class="call">
+                        <ion-icon class="chat-icon" ios="ios-chatboxes" md="md-chatboxes"></ion-icon><br>
+                        <p class="call-content">Chat Now</p>
+                        <p class="call-number">27x7 customer care</p>
+                  </ion-col>
+                </ion-row>
+        </ion-grid>
+       
+ 
+</ion-content>

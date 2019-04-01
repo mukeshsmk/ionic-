@@ -1,0 +1,147 @@
+.segment-md .segment-button ion-icon {
+    font-size: 22px;
+    line-height: 0rem;
+}
+ .toolbar-title {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: right;
+        letter-spacing: 1px;
+        color: #ffffff;
+    }
+   
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+    .header-icon{
+        color:#ffffff !important;
+    }
+    #ion-diagnostics-toast .ion-diagnostics-toast-message{
+        padding:0px !important;
+    }
+
+page-search {
+
+    .searchbar-md .searchbar-search-icon {
+        left: 16px;
+        top: 19px !important;
+    }
+    .input-wrapper {
+        margin-left: 0% !important;
+    }
+    .searchbar-md .searchbar-input {
+        font-size: 18px !important;
+    }
+    .alert-head {
+        text-align: left;
+        text-align: start;
+        padding: 10px 22px 10px !important;
+    }
+    .item-multiple-inputs ion-select {
+        position: relative;
+        right: 20px !important;
+    }
+    .search{
+        width: 100%;
+        float: left;
+        text-align: center;
+        background: #e4e4e4;
+    }
+    .save-search{
+        width:30%;
+        float:left;
+        margin: 5px 0;
+        border-right: 1px solid #999999
+    }
+    .my-save{
+        width:30%;
+        float:left;
+        padding: 5px 0;
+    }
+    .search-now{
+        width: 40%;
+        float: left;
+        padding: 24px 0;
+        font-size: 14px;
+        background: linear-gradient(to right, #d30000, #350000) !important;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .search p{
+        font-size: 11px;
+        margin: 5px 0;
+    }
+    .w3-animate-top {
+        position: relative;
+        animation: animatetop 1.0s;
+    }
+
+    @media (max-width: 768px){
+    .w3-modal {
+    padding-top: 180px !important;
+}
+    }
+    .popup-img{
+        width:100%;
+        float:left;
+    }
+    .popup-img p{
+        margin: 10px 0;
+    }
+    .w3-teal, .w3-hover-teal:hover {
+        color: #fff !important;
+        background: linear-gradient(to right, #d30000, #350000);
+    }
+    .popup-contact p{
+        margin: 55px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+    .popup-icon{
+        color: #fff;
+        background: linear-gradient(to right, #d30000, #350000);
+        border-radius: 75px;
+        padding: 6px 8px
+    }
+    .button-clear-md-secondary {
+        border-color: transparent;
+        color: #ffffff;
+        background: -webkit-gradient(linear, left top, right top, from(#d30000), to(#350000));
+        background: linear-gradient(to right, #d30000, #350000);
+        height: 1px;
+        padding: 15px 20px;
+        border-radius: 45px;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .popup-contact{
+        width:100%;
+        float:left;
+    }
+    .w3-teal, page-search .w3-hover-teal:hover {
+        color: #fff !important;
+        background-color: #c71919 !important;
+    }
+    
+    .w3-modal-content {
+        margin: 0 9%;
+        width: auto!important;
+    }
+    .alert-md .alert-input {
+        margin: 5px 0;
+        border-bottom: 1px solid #dedede;
+        color: #000;
+        font-size: 18px !important;
+    }
+}

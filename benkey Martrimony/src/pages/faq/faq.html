@@ -1,0 +1,33 @@
+
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title class="inbox-title">FAQs</ion-title>
+        </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+    
+        <ion-grid>
+            <ion-row (click)="gotofaqprofile()">
+              <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/faq/1.png"></ion-col><ion-col class="privacy-content" col-10> Profile</ion-col>
+            </ion-row>
+            <ion-row (click)="gotofaqmembership()">
+              <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/faq/2.png"></ion-col><ion-col class="privacy-content" col-10> Membership</ion-col>
+            </ion-row>
+            <ion-row (click)="gotofaqcontact()">
+              <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/faq/3.png"></ion-col><ion-col class="privacy-content" col-10> Contact Matches</ion-col>
+            </ion-row>
+            <ion-row (click)="gotofaqsearch()">
+              <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/faq/4.png"></ion-col><ion-col class="privacy-content" col-10> Searches</ion-col>
+            </ion-row>
+            <ion-row (click)="gotofaqprivacy()">
+              <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/faq/5.png"></ion-col><ion-col class="privacy-content" col-10> Privacy Settings</ion-col>
+            </ion-row>           
+        </ion-grid>
+       
+           
+     
+    </ion-content>

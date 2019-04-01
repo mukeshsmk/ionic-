@@ -1,0 +1,31 @@
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="inbox-title">PRIVACY</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row (click)="gotocontactfilter()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/privacy-1.png"></ion-col><ion-col class="privacy-content" col-10> Contact Filter</ion-col>
+        </ion-row>
+        <ion-row (click)="gotoblockedprofiles()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/privacy-2.png"></ion-col><ion-col class="privacy-content" col-10> Blocked Profiles</ion-col>
+        </ion-row>
+        <ion-row (click)="gotoignoredprofiles()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/privacy-3.png"></ion-col><ion-col class="privacy-content" col-10> Ignored Profiles</ion-col>
+        </ion-row>
+        <ion-row (click)="gotophoneprivacy()">
+          <ion-col col-2 class="col1"><img class="privacy-img" src="assets/imgs/privacy-4.png"></ion-col><ion-col class="privacy-content" col-10> Phone Privacy</ion-col>
+        </ion-row>
+       
+      </ion-grid>
+   
+       
+ 
+</ion-content>

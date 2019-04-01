@@ -1,0 +1,109 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 20px !important;
+    font-weight: 500;
+    color: #424242;
+}
+.item-md {
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label label-md{
+    font-size: 16px;
+}
+.bar-button-menutoggle-md ion-icon {
+    padding: 0 6px;
+    font-size: 24px;
+}
+.menu-inner{
+    width:100% !important;
+}
+.sidemenu{
+    width:100%;
+    float:left;
+}
+.sidemenu-img{
+    width:30%;
+    float:left;
+}
+.sidemenu-content{
+    width:65%;
+    float:left;
+    color: #e7d8d8;
+}
+.menu-bg{
+    background: none !important; 
+}
+.profile-img{
+    margin: 15px 10px !important; 
+    border-radius: 80px !important;
+}
+.sidemenu-content p{
+    margin: 20px 0 0 0;
+    font-size: 18px;
+}
+.sidemenu-content h5{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.profile-name{
+    width:95%;
+    float:left;
+}
+.edit{
+    width:5%;
+    float:left;
+    margin: 5px 0;
+}
+.edit-icon{
+    font-size: 20px;
+    margin: 5px 0px 0 0px;
+}
+.menu-icon {
+    font-size: 24px !important;
+    margin-bottom: 0px !important;
+    margin-top: 15px !important;
+    position: relative;
+    right: 90%;
+}
+.list-md .item-block .item-inner{
+        border-bottom: 1px solid #dedede;
+}
+.input-wrapper {
+    margin-left: 12%;
+}
+.back-button-icon-md {
+    margin: 0;
+    padding: 0 6px;
+    text-align: left;
+    text-align: start;
+    font-size: 24px;
+    font-weight: normal;
+}
