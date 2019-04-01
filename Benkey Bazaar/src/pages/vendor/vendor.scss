@@ -1,0 +1,88 @@
+page-vendor {
+    .toolbar-title-md {
+        padding: 0 0px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #ffffff;
+        margin: 0 20%;
+    }
+    .toolbar-background-md {
+        border-color: #b2b2b2;
+        margin: 0;
+        padding: 15px 0px;
+        text-align: center;
+        color: #fff;
+        font-size: 22px;
+        font-family: Titillium Web;
+        background: linear-gradient(to right, #e46760 , #efb88b);
+        font-weight: 300;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    .scroll-content {
+        padding: 0px !important;
+    }
+    .cart{
+        width:100%;
+        float:left;
+    }
+    .cart1{
+        width:30%;
+        float:left;
+        margin: 10px 5px;
+        text-align: center;
+    }
+    .cart1 ul {
+        padding: 0px;
+        margin: -5px 0;
+        position: relative;
+        bottom: 14px;
+    }
+  .cart1 ul.rating li ion-icon {
+        font-size: 18px;
+    }
+    .cart1 ul.rating li {
+        padding: 5px 0px !important;
+        background: none;
+        color: #fbb714;;
+    }
+    // .star1{
+    //     color:#dac764 !important;
+    // }
+    .cart1 h2{
+        margin: 2px 0;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .cart1 span{
+        font-size:12px;
+        position: relative;
+        bottom: 10px;
+    }
+    .star-rating input[type=radio] {
+        display: none
+    }
+    .star-rating {
+        direction: rtl;
+        display: inline-block;
+        padding: 0px !important;
+
+    }
+    .star-rating label {
+        color: #bbb;
+        font-size: 14px;
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out
+    }
+    
+    .star-rating label:hover,
+    .star-rating label:hover ~ label,
+    .star-rating input[type=radio]:checked ~ label {
+        color: #dac764
+    }
+}
