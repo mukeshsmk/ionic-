@@ -1,0 +1,178 @@
+page-loading {
+
+    body{
+        font-family:Lato;
+    }
+    *, *:before, *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      @import url('https://fonts.googleapis.com/css?family=Muli');
+      $textDur: 1050ms;
+      $waveDur: 2100ms;
+      
+      html, body {
+        font-size: 62.5%;
+        background-color: #00091B;
+        font-family: 'Muli', Helvetica, sans-serif;
+      }
+      
+      .container {
+        position: absolute;
+        width: 17rem;
+        height: 10rem;
+        left: 70%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+      }
+      .text {
+        color: #121111;
+        margin: 11px 0px 0 0;
+        font-size: 20px;
+        font-weight: 600;
+        display: inline-block;
+        -webkit-animation: text 1050ms ease-in infinite;
+        animation: text 1270ms ease-in infinite;
+        -webkit-transform: translatez(0);
+        transform: translatez(0);
+        &-w {
+          left: 0rem;
+          transform: translate3d(0, -4rem, 0);
+          animation: text-w $textDur ease-in infinite;
+        }
+        &-a {
+          left: 5.4rem;
+          animation-delay: 150ms;
+        }
+        &-v {
+          left: 9.6rem;
+          animation-delay: 230ms;
+        }
+        &-e {
+          left: 13rem;
+          animation-delay: 310ms;
+        }
+      }
+      
+      .coast { // wave: translate-x
+        position: absolute;
+        left: 1.3rem;
+        bottom: 1.7rem;
+        width: 6.2rem;
+        height: 2.2rem;
+        display: inline-block;
+        animation: coast $waveDur linear infinite;
+        transform: translateZ(0);
+      }
+      
+      .wave-rel-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        perspective: 3rem;
+        perspective-origin: 0%, 50%;
+      }
+      
+      page-first .wave {
+        position: absolute;
+        width: 2.2rem;
+        height: 1.2rem;
+        right: 83px;
+        top: 30px;
+        border-radius: 1.1rem;
+        background: radial-gradient(ellipse at center, #ff0600 0%, #ff0600 73%, #ff0600 100%);
+        display: inline-block;
+        -webkit-animation: wave 2100ms linear infinite;
+        animation: wave 2100ms linear infinite;
+        will-change: width;
+        -webkit-transform: translateZ(0) scale(0);
+        transform: translateZ(0) scale(0);
+    }
+      
+      .delay {
+        animation-delay: $waveDur / 2;
+      }
+      
+      @keyframes text {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        30% {
+          transform: translate3d(0, 0, 0);
+        }
+        45% {
+          transform: translate3d(0, -4rem, 0);
+        }
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      
+      @keyframes text-w {
+        0% {
+          transform: translate3d(0, -4rem, 0);
+        }
+        38% {
+          transform: translate3d(0, -4rem, 0);
+        }
+        69% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(0, -4rem, 0);
+        }
+      }
+      
+      @keyframes coast {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        23% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(16rem, 0, 0);
+        }
+        100% {
+          transform: translate3d(16rem, 0, 0);
+        }
+      }
+      
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+          width: 2.2rem;
+        }
+        10% {
+          transform: scale(1);
+        }
+        23% {
+          width: 2.2rem;
+        }
+        32% {
+          width: 6.1rem;
+        }
+        42% {
+          width: 5rem;
+          transform: rotateY(0deg) scale(1, 1);
+        }
+        51% {
+          transform: rotateY(90deg) scale(0.6, 0.2);
+        }
+        52% {
+          transform: rotateY(90deg) scale(0);
+        }
+        100% {
+          transform: rotateY(90deg) scale(0);
+        }
+        
+      }
+     .text-e {
+        left: 13rem;
+        -webkit-animation-delay: 310ms;
+        animation-delay: 100ms;
+    }
+      
+    }
